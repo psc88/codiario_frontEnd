@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import $ from 'jquery';
 import Popper from 'popper.js';
+import { NavDropdown } from "react-bootstrap";
 
 const Navigation = () =>{
     return(
@@ -33,7 +34,7 @@ const Navigation = () =>{
                    <NavDropdown.Item href="#action/3.2">Economía</NavDropdown.Item>
                    <NavDropdown.Item href="#action/3.3">Salud</NavDropdown.Item>
                    <NavDropdown.Item href="#action/3.4">Fotografías</NavDropdown.Item>
-                  </NavDropdown>
+    </NavDropdown>
                </Nav>
                <Nav>
                  <Nav.Link href="#suscribirse" variant="primary" type="button">Suscribirse</Nav.Link>
