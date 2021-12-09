@@ -1,68 +1,47 @@
 import React from 'react';
 import '../App.css';
-import { Col, Row, Image } from 'react-bootstrap';
-import mapaArgentina from '../img/mapaArgentina.png'
+import { Col, Row, Image, Container } from 'react-bootstrap';
+import DetalleCovid from '../Components/DetalleCovid';
+import bolsonaro from '../img/bolsonaro.jpg'
+import jugadores from '../img/jugadores.jfif'
+import pobresa from '../img/pobresa.jpg'
+import publicidadYpf from '../img/publicidadYpf.png'
 
 const Inicio = () => {
     return (
         <>
-            <section className='class="p-3 mb-2 bg-dark text-white'>
-                <Row>
-                    <Col md={6} sm={12}>
-                        <article>
-                            <Row className='m-3'>
-                                <Col md={3}>
-                                    <h4>Vacunación en Argentina</h4>
-                                </Col>
-                                <Col md={3}>
-                                    <Image src={mapaArgentina} id='imagenMapaArgentina'></Image>
-                                </Col>
-                                <Col md={6}>
-                                    <h4 className='mb-5'>Personas Vacunadas</h4>
-                                    <article className='d-flex'>
-                                        <p>Con al menos 1 dosis</p>
-                                        <p className='ms-3'>37.124.922</p>
-                                    </article>
-                                    <hr />
-                                    <article className='d-flex'>
-                                        <p>Esquema Completo</p>
-                                        <p className='ms-3'>30.708.398</p>
-                                    </article>
-                                </Col>
-                            </Row>
-                        </article>
-                    </Col>
-                    <Col md={6} sm={12}>
-                        <article>
-                            <Row className='m-3'>
-                                <Col md={3}>
-                                    <h4>Avance del virus en la Argentina</h4>
-                                </Col>
-                                <Col md={3}>
-                                    <Image src={mapaArgentina} id='imagenMapaArgentina'></Image>
-                                </Col>
-                                <Col md={6}>
-                                    <h4 className='mb-5'>Totales</h4>
-                                    <article className='d-flex mb-3'>
-                                        <p>INFECTADOS</p>
-                                        <p className='ms-3'>5.348.123</p>
-                                    </article>
-                                    <hr className='mt-1'/>
-                                    <article className='d-flex'>
-                                        <p>RECUPERADOS</p>
-                                        <p className='ms-3'>5.206.911</p>
-                                    </article>
-                                    <hr className='mt-1'/>
-                                    <article className='d-flex'>
-                                        <p>FALLECIDOS</p>
-                                        <p className='ms-3'>116.708</p>
-                                    </article>
-                                </Col>
-                            </Row>
-                        </article>
-                    </Col>
-                </Row>
-            </section>
+            <DetalleCovid></DetalleCovid>
+            <Container className='mb-3'>
+                <article>
+                    <Row>
+                        <Col md={8} sm={12}>
+                            <h1>Malestar de Bolsonaro con Alberto Fernández por el acto con Lula: canceló la cumbre de presidentes del Mercosur en Brasilia</h1>
+                            <p>El gobierno brasileño confirmó que el encuentro, que iba a ser presencial, pasará a ser virtual. Alegaron que es por el avance de la Ómicron, pero en el ámbito diplomático lo vinculan a la presencia del ex mandatario en Plaza de Mayo</p>
+                            <Image src={bolsonaro} fluid ></Image>
+                            <hr className='mt-1' />
+                        </Col>
+                        <Col md={4} sm={12} >
+                            <section>
+                                <article>
+                                    <h4>Boca Juniors venció a Talleres de Córdoba por penales y es campeón de la Copa Argentina</h4>
+                                    <Image src={jugadores} fluid ></Image>
+                                    <hr className='mt-1' />
+                                </article>
+                                <article>
+                                    <h4>Unicef: Argentina tiene 3,8 millones de chicos pobres y con derechos fundamentales vulnerados</h4>
+                                    <Image src={pobresa} fluid ></Image>
+                                    <hr className='mt-1' />
+                                </article>
+                            </section>
+                        </Col>
+                    </Row>
+                </article>
+                <article className='text-center'>
+                    <p>PUBLICIDAD</p>
+                    <a href="#"><Image src={publicidadYpf} className='my-5' fluid></Image></a>
+                </article>
+
+            </Container>
         </>
     );
 };
