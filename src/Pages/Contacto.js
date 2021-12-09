@@ -7,6 +7,8 @@ import {
   validarNumero,
 } from "../Helpers/helpers";
 
+import emailjs from "emailjs-com";
+
 const Contacto = () => {
   const [nombreContacto, setNombreContacto] = useState("");
   const [telefonoContacto, setTelefonoContacto] = useState("");
@@ -15,7 +17,27 @@ const Contacto = () => {
     e.preventDefault();
     //validar todos los input
     if (validarNombre(nombreContacto) && validarNumero(telefonoContacto)) {
-      acierto()
+      acierto();
+      const contactoNuevo = {
+        from_name: nombreContacto,
+        message: telefonoContacto,
+      };
+
+      emailjs
+        .send(
+          "service_pt41qrm",
+          "template_kenlejx",
+          contactoNuevo,
+          "user_OVQcZD71YLsJOeqIJhZKK",
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          (err) => {
+            console.log("FAILED...", err);
+          }
+        );
     } else {
       error();
     }
