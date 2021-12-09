@@ -31,7 +31,7 @@ const Navigation = () =>{
                  <Nav.Link href="#espectaculos">Espectáculos</Nav.Link>
                  <Nav.Link href="#tecnologia">Tecnología</Nav.Link>
                  <Nav.Link href="#deportes">Deportes</Nav.Link>
-                 <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                 <NavDropdown title="+ Secciones" id="collasible-nav-dropdown">
                    <NavDropdown.Item href="#action/3.1">Política</NavDropdown.Item>
                    <NavDropdown.Item href="#action/3.2">Economía</NavDropdown.Item>
                    <NavDropdown.Item href="#action/3.3">Salud</NavDropdown.Item>
