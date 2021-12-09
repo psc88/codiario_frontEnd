@@ -7,6 +7,8 @@ import 'bootstrap/dist/js/bootstrap.js';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import { NavDropdown } from "react-bootstrap";
+import logo from "../../img/Logo.png"
+import { Button } from "react-bootstrap";
 
 const Navigation = () =>{
     return(
@@ -15,11 +17,11 @@ const Navigation = () =>{
              <Container>
              <Navbar.Brand href="#home">
              <img
-                   src="../../img/Logo.png"
-                   width="20"
-                   height="14"
+                   src={logo}
+                   width="120"
+                   height="56"
                    className="d-inline-block align-top"
-                   alt="<CoDiario> logo"
+                   alt="<CoDiario>"
                  />
              </Navbar.Brand>
              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -36,12 +38,16 @@ const Navigation = () =>{
                    <NavDropdown.Item href="#action/3.4">Fotografías</NavDropdown.Item>
     </NavDropdown>
                </Nav>
-               <Nav>
+               <Button variant="primary" type="submit" className="w-30 m-10">
+                    Suscribirse</Button>
+               <Button variant="warning" type="submit" className="w-30">
+                    Iniciar Seción</Button>
+               {/*<Nav>
                  <Nav.Link href="#suscribirse" variant="primary" type="button">Suscribirse</Nav.Link>
                  <Nav.Link eventKey={2} href="#sesion" variant="warning" type="button">
                    Iniciar Sesión
                  </Nav.Link>
-               </Nav>
+               </Nav>*/}
              </Navbar.Collapse>
              </Container>
             </Navbar>
