@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+
+/* Acerca de nosotros  */
+#tituloNosotros{
+    font-size: 80px;
+    font-family: 'Playfair Display', serif;
+}
+
+#subtituloNosotros{
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
