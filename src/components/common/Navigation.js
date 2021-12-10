@@ -38,6 +38,7 @@ const Navigation = () =>{
                    <NavDropdown.Item href="#action/3.4">Fotografías</NavDropdown.Item>
     </NavDropdown>
                </Nav>
+               <Nav.Link href="#acercanosotros">Acerca de Nosotros</Nav.Link>
                <Button variant="primary" type="submit" className="w-30 m-10">
                     Suscribirse</Button>
                <Button variant="warning" type="submit" className="w-30">
