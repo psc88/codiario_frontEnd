@@ -49,9 +49,9 @@ const Inicio = (props) => {
                         </Col>
                     </Row>
                 </article>
-                <article className='text-center'>
-                    <p>PUBLICIDAD</p>
-                    <a href="#"><Image src={publicidadYpf} className='my-5' fluid></Image></a>
+                <article className='text-center bg-secondary'>
+                    <p className='fw-bold mt-2 py-3'>PUBLICIDAD</p>
+                    <a href="https://www.ypf.com/Paginas/home.aspx" rel='noreferrer' target="_blank"><Image src={publicidadYpf} className='mb-5' fluid></Image></a>
                 </article>
                 <article>
                     <Noticias noticias={publicacionActual}></Noticias>
