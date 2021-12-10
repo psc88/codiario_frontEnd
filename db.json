@@ -1,0 +1,46 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Brasil",
+      "noticia": "sopa do macaco",
+      "fecha": "2021-12-01"
+    },
+    {
+      "id": 2,
+      "titulo": "Argentina",
+      "noticia": "sopa do macaco",
+      "fecha": "2021-12-01"
+    },
+    {
+      "id": 3,
+      "titulo": "Peru",
+      "noticia": "sopa do macaco",
+      "fecha": "2021-12-01"
+    },
+    {
+      "id": 4,
+      "titulo": "EEUU",
+      "noticia": "sopa do macaco",
+      "fecha": "2021-12-01"
+    },
+    {
+      "id": 5,
+      "titulo": "Chile",
+      "noticia": "sopa do macaco",
+      "fecha": "2021-12-01"
+    },
+    {
+      "id": 6,
+      "titulo": "España",
+      "noticia": "sopa do macaco",
+      "fecha": "2021-12-01"
+    },
+    {
+      "id": 7,
+      "titulo": "Colombia",
+      "noticia": "sopa do macaco",
+      "fecha": "2021-12-01"
+    }
+  ]
+}

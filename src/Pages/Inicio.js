@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../App.css';
 import { Col, Row, Image, Container } from 'react-bootstrap';
 import DetalleCovid from '../Components/DetalleCovid';
@@ -6,8 +6,16 @@ import bolsonaro from '../img/bolsonaro.jpg'
 import jugadores from '../img/jugadores.jfif'
 import pobresa from '../img/pobresa.jpg'
 import publicidadYpf from '../img/publicidadYpf.png'
+import Noticias from '../Components/Noticias';
+import Paginacion from '../Components/Paginacion';
 
-const Inicio = () => {
+const Inicio = (props) => {
+    const [paginaActual, setPaginaActual] = useState(1);
+    const [paginaSiguiente, setPaginaSiguiente] = useState(6);
+    const indiceUltimaPublicacion = paginaActual * paginaSiguiente
+    const indicePrimeraPublicacion = indiceUltimaPublicacion - paginaSiguiente
+    const publicacionActual = props.noticias.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
+    
     return (
         <>
             <DetalleCovid></DetalleCovid>
@@ -40,7 +48,11 @@ const Inicio = () => {
                     <p>PUBLICIDAD</p>
                     <a href="#"><Image src={publicidadYpf} className='my-5' fluid></Image></a>
                 </article>
-
+                <article>
+                    <Noticias noticias={publicacionActual}></Noticias>
+                    <article className='d-flex justify-content-center'>
+                    </article>
+                </article>
             </Container>
         </>
     );
