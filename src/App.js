@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Navigation></Navigation>
-      <Routes>
+            <Routes>
         <Route exact path='/' element={<Inicio></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
       </Routes>
