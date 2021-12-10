@@ -43,12 +43,7 @@ const Navigation = () =>{
                     Suscribirse</Button>
                <Button variant="warning" type="submit" className="w-30">
                     Iniciar Seción</Button>
-               {/*<Nav>
-                 <Nav.Link href="#suscribirse" variant="primary" type="button">Suscribirse</Nav.Link>
-                 <Nav.Link eventKey={2} href="#sesion" variant="warning" type="button">
-                   Iniciar Sesión
-                 </Nav.Link>
-               </Nav>*/}
+               
              </Navbar.Collapse>
              </Container>
             </Navbar>
