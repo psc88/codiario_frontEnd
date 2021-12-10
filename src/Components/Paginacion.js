@@ -1,20 +1,34 @@
+import React from 'react';
 import { Pagination } from 'react-bootstrap';
 
 const Paginacion = (props) => {
-    if(props.paginacion === 1){
-        
+    const numerosPaginas = []
+
+    for (let i = 1; i <= Math.ceil(props.totalPublicaciones/props.ultimaPagina); i++) {
+        numerosPaginas.push(i);
     }
+
     return (
-        <>
-            <Pagination>
-                <Pagination.Prev />
-                <Pagination.Item active>{1}</Pagination.Item>
-                <Pagination.Item>{2}</Pagination.Item>
-                <Pagination.Item>{3}</Pagination.Item>
-                <Pagination.Ellipsis />
-                <Pagination.Next />
-            </Pagination>
-        </>
+        <Pagination>
+            {
+                numerosPaginas.map(numero => (
+                    <Pagination.Item onClick={()=> props.paginas(numero)}>{numero}</Pagination.Item>
+                ))
+            }
+        </Pagination>
+        // <nav>
+        //     <ul className='pagination'>
+        //         {
+        //       numerosPaginas.map( numero => (
+        //             <li key={numero} className='page-item'>
+        //                 <a href='!#' className='page-link'>
+        //                     {numero}
+        //                 </a>
+        //             </li>
+        //            ))
+        //              }
+        //     </ul>
+        // </nav>
     );
 };
 

@@ -11,11 +11,16 @@ import Paginacion from '../Components/Paginacion';
 
 const Inicio = (props) => {
     const [paginaActual, setPaginaActual] = useState(1);
-    const [paginaSiguiente, setPaginaSiguiente] = useState(6);
-    const indiceUltimaPublicacion = paginaActual * paginaSiguiente
-    const indicePrimeraPublicacion = indiceUltimaPublicacion - paginaSiguiente
+    const [ultimaPagina] = useState(3);
+
+    const indiceUltimaPublicacion = paginaActual * ultimaPagina
+    const indicePrimeraPublicacion = indiceUltimaPublicacion - ultimaPagina
     const publicacionActual = props.noticias.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
     
+    const totalNoticias = props.noticias.length;
+
+    const paginas = (numeroPagina) => setPaginaActual(numeroPagina); 
+
     return (
         <>
             <DetalleCovid></DetalleCovid>
@@ -51,6 +56,7 @@ const Inicio = (props) => {
                 <article>
                     <Noticias noticias={publicacionActual}></Noticias>
                     <article className='d-flex justify-content-center'>
+                        <Paginacion ultimaPagina={ultimaPagina} totalPublicaciones={totalNoticias} paginas={paginas}></Paginacion>
                     </article>
                 </article>
             </Container>
