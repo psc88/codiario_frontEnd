@@ -45,9 +45,6 @@ const NavbarUsuario = () =>{
                <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
                <Button variant="primary" type="submit" className="w-30 m-10">
                     Suscribirse</Button>
-               <Button variant="warning" type="submit" className="w-30">
-                    Iniciar Seción</Button>
-               
              </Navbar.Collapse>
              </Container>
             </Navbar>
