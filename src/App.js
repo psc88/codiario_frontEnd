@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import $ from 'jquery';
 import Popper from 'popper.js';
+import Login from './Pages/Login';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Routes>
         <Route exact path='/' element={<Inicio></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
+        <Route exact path='/Pages/iniciarsesion' element={<Login></Login>}></Route>
       </Routes>
     </Router>
   );
