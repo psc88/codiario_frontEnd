@@ -15,7 +15,7 @@ function App() {
     return (
     <Router>
       <NavbarUsuario></NavbarUsuario>
-            <Routes>
+        <Routes>
         <Route exact path='/' element={<Inicio></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
         <Route exact path='/iniciarsesion' element={<Login></Login>}></Route>
