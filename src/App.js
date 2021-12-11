@@ -22,7 +22,7 @@ function App() {
             <Routes>
         <Route exact path='/' element={<Inicio></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
-        <Route exact path='/iniciarsesion' element={<Login></Login>}></Route>
+        <Route exact path='/src/Pages/iniciarsesion' element={<Login></Login>}></Route>
       </Routes>
     </Router>
   );

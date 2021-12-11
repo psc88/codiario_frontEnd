@@ -8,34 +8,32 @@ import {Link} from "react-router-dom";
 const Login = ()=>{
  
     return(
-       <Container>
-           <div id="background" className="w-100">
-               <section id="transparente">
-                <Form>
-                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                       <Form.Label>Correo electrónico</Form.Label>
-                       <Form.Control type="email" placeholder="Ingrese su correo electrónico" />
-                       <Form.Text className="text-muted">
-                          Nunca compartiremos su correo electrónico con nadie más.
-                       </Form.Text>
-                     </Form.Group>
+      <Container>
+      <div id="background" className="w-100">
+          <section id="" >
+           <Form className="my-5 center col-5">
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Correo electrónico</Form.Label>
+                  <Form.Control type="email" placeholder="Ingrese su correo electrónico " />
+                  <Form.Text className="text-muted">
+                     Nunca compartiremos su correo electrónico con nadie más.
+                  </Form.Text>
+                </Form.Group>
 
-                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                       <Form.Label>Contraseña</Form.Label>
-                       <Form.Control type="password" placeholder="contraseña" />
-                     </Form.Group>
-                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                       <Form.Check type="checkbox" label="Check me out" />
-                     </Form.Group>
-                     <Link to="/" className="btn btn-warning">Ingresar</Link>
-                     {/*<Button variant="primary" type="submit">
-                        Ingresar
-    </Button>*/}
-                 </Form>
-              </section>
-            </div>
-         </Container>
-    )
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Contraseña</Form.Label>
+                  <Form.Control type="password" placeholder="contraseña" />
+                </Form.Group>
+                
+                <Link to="/" className="btn btn-warning">Ingresar</Link>
+                {/*<Button variant="primary" type="submit">
+                   Ingresar
+</Button>*/}
+            </Form>
+         </section>
+       </div>
+    </Container>
+)
 }
 
 
