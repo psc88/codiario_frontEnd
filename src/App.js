@@ -12,12 +12,13 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import Login from './Pages/Login';
 import {useState, useEffect} from 'react';
+import NavbarUsuario from './components/common/NavbarUsuario';
 
 function App() {
    
     return (
     <Router>
-      <Navigation></Navigation>
+      <NavbarUsuario></NavbarUsuario>
             <Routes>
         <Route exact path='/' element={<Inicio></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
