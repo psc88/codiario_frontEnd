@@ -3,12 +3,15 @@ import { Container } from "react-bootstrap";
 import '../App.css';
 import { Form } from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {Background} from "../img/Backgroun.png";
 
 const Login = ()=>{
  
     return(
-      <Container>
-      <div id="background" className="w-100">
+      <Container >
+         <img src={Background} alt="background" className='w-100'/>
+      <div >
+      
           <section id="" >
            <Form className="my-5 center col-5">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
