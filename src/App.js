@@ -11,13 +11,14 @@ import 'bootstrap/dist/js/bootstrap.js';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import Login from './Pages/Login';
+import {useState, useEffect} from 'react';
 
 function App() {
   return (
     <Router>
       <Navigation></Navigation>
             <Routes>
-        <Route exact path='/' element={<Inicio></Inicio>}></Route>
+        <Route exact path='/' element={<Inicio noticias={noticias}></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
         <Route exact path='/iniciarsesion' element={<Login></Login>}></Route>
       </Routes>
