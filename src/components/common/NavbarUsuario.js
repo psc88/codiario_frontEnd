@@ -1,13 +1,17 @@
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container, } from "react-bootstrap";
 import React from "react";
 import { Link } from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import $ from 'jquery';
+import Popper from 'popper.js';
+import { NavDropdown } from "react-bootstrap";
 import logo from "../../img/Logo.png"
+import { Button } from "react-bootstrap";
 
 
-const Navigation = () =>{
+const NavbarUsuario = () =>{
     return(
         <>
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -39,16 +43,16 @@ const Navigation = () =>{
                  </NavDropdown>
                </Nav>
                <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
+               <Link to="/contacto" className="nav-link">Contacto</Link>
                <Link to="" className="btn btn-primary">Suscribirse</Link> 
-               <Link to="/login" className="btn btn-warning">Iniciar Sesión</Link>   
-                          
              </Navbar.Collapse>
              </Container>
             </Navbar>
+
       </>
         
     );
 };  
 
 
-export default Navigation; 
+export default NavbarUsuario; 
