@@ -9,7 +9,7 @@ const Login = ()=>{
  
     return(
       <Container >
-         <img src={Background} alt="background" className='w-100'/>
+         {/*<img src={Background} alt="background" className='w-100'/>*/}
       <div >
       
           <section id="" >
