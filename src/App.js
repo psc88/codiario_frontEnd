@@ -15,7 +15,8 @@ import NavbarUsuario from './components/common/NavbarUsuario';
 function App() {
   return (
     <Router>
-      <Navigation></Navigation>
+      {/*<Navigation></Navigation>*/}
+      <NavbarUsuario></NavbarUsuario>
       <Routes>
         <Route exact path='/' element={<Inicio></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>

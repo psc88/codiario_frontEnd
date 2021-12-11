@@ -43,6 +43,7 @@ const NavbarUsuario = () =>{
                  </NavDropdown>
                </Nav>
                <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
+               <Link to="/contacto" className="nav-link">Contacto</Link>
                <Button variant="primary" type="submit" className="w-30 m-10">
                     Suscribirse</Button>
              </Navbar.Collapse>
