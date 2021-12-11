@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import '../App.css';
 import { Form } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 const Login = ()=>{
@@ -26,9 +25,6 @@ const Login = ()=>{
                 </Form.Group>
                 
                 <Link to="/" className="btn btn-warning">Ingresar</Link>
-                {/*<Button variant="primary" type="submit">
-                   Ingresar
-</Button>*/}
             </Form>
          </section>
        </div>
