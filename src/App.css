@@ -12,11 +12,3 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 };
 
 
-/*Codigo transparencia form*/
-#transparente{
-    opacity: 0.8;
-    -moz-opacity: 0.8;
-    filter: alpha(opacity=80);
-    -khtml-opacity: 0.8;
-    
-    } 
