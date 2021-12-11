@@ -27,18 +27,18 @@ const NavbarAdmin = () =>{
              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
              <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="me-auto">
-                 <Nav.Link href="#noticias">Noticias</Nav.Link>
-                 <Nav.Link href="#categorias">Categorias</Nav.Link>
-                 <Nav.Link href="#acercanosotros">Acerca de Nosotros</Nav.Link>
-                  <Nav.Link href="#contacto">Contacto</Nav.Link>
+                 <Link to="/" className="nav-link">Noticias</Link>
+                 <Link to="/categorias" className="nav-link">Categorias</Link>
+                 <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
+                  <Link to="/contacto" className="nav-link">Contacto</Link>
                 </Nav>
-                 <Button variant="primary" type="submit" className="w-30 m-10">
-                       Nueva Noticia</Button>
-                  <Button variant="warning" type="submit" className="w-30">
-                       Nueva Categoria</Button>
+                <Link to="" className="btn btn-primary">Nueva noticia</Link> 
+                 <Link to="" className="btn btn-warning">Nueva Categoria</Link>
              </Navbar.Collapse>
              </Container>
             </Navbar>
+
+            <h1>Aqui lleva mensaje de bienvenida</h1>
       </>
         
     );

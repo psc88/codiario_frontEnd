@@ -1,5 +1,5 @@
 import './App.css';
-import Navigation from './components/common/Navigation';
+import NavbarAdmin from './components/common/NavbarAdmin';
 import Inicio from './Pages/Inicio';
 import AcercaNosotros from './Pages/AcercaNosotros';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -14,7 +14,7 @@ import Popper from 'popper.js';
 function App() {
   return (
     <Router>
-      <Navigation></Navigation>
+      <NavbarAdmin></NavbarAdmin>
             <Routes>
         <Route exact path='/' element={<Inicio></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
