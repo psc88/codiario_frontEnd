@@ -1,10 +1,10 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Form, Card} from "react-bootstrap";
 import '../App.css';
-import { Form } from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {Background} from "../img/Backgroun.png";
 import { Formik } from "formik";
+import CardBody from "./CardBody"
+
 
 const Login = ()=>{
 
@@ -12,7 +12,6 @@ const Login = ()=>{
       return (
         <Container className="p-5">
           <Card>
-            <CardHeader></CardHeader>
             <CardBody>
               <Formik
                 initialValues={{
@@ -64,11 +63,8 @@ const Login = ()=>{
 
 
      return(
-      
-         {/*<img src={Background} alt="background" className='w-100'/>*/}
-   <div >
-      
-          <section id="" >
+          
+          
            <Form className="my-5 center col-5" onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                   <Form.Label for="name">Nombre y Apellido</Form.Label>
@@ -111,8 +107,8 @@ const Login = ()=>{
                 <Link to="/" className="btn btn-warning" type="submit" disabled={isSubmitting} >
                     {isSubmitting? `Loading` : `Submit`} Ingresar</Link>
             </Form>
-            </section>
-           </div>
+            
+           
      )}}
         </Formik>
         </CardBody>
