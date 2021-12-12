@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookSquare, faTwitterSquare, faInstagramSquare, faGooglePlay, faAppStoreIos, faWhatsappSquare } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 
-
-
 const Footer = () => {
 
     return (
@@ -51,8 +49,8 @@ const Footer = () => {
                         <Link to='*' className='text-light text-decoration-none'>Fotografia</Link>
                     </div>
                     <div className='my-2 col-lg-4 col-sm-12 d-flex flex-column'>
-                        <h6>General Paz 576, San Miguel de Tucumán (T4000) , Tucumán</h6>
-                        <Link to='*' className='text-light text-decoration-none'><FontAwesomeIcon icon={faEnvelopeSquare} className='m-2 fa-2x text-decoration-none' />-Contacto-</Link>
+                        <h6>General Paz 576, piso 9 - oficina 2, San Miguel de Tucumán (CP-4000) , Tucumán</h6>
+                        <Link to='*' className='text-light text-decoration-none'><FontAwesomeIcon icon={faEnvelopeSquare} className='m-2 fa-2x text-decoration-none' />codiario@gmail.com</Link>
                         <Link to='*' className='text-light text-decoration-none'><FontAwesomeIcon icon={faWhatsappSquare} className='m-2 fa-2x text-decoration-none' />381512345</Link>
                         </div>
                 </section>
