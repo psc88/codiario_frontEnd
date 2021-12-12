@@ -5,30 +5,41 @@ import {
   acierto,
   validarNombre,
   validarNumero,
+  validarComentario,
 } from "../Helpers/helpers";
 
 import emailjs from "emailjs-com";
+import{ init } from 'emailjs-com';
+init("user_OVQcZD71YLsJOeqIJhZKK");
 
 const Contacto = () => {
   const [nombreContacto, setNombreContacto] = useState("");
   const [telefonoContacto, setTelefonoContacto] = useState("");
+  const [comentarios, setComentarios] = useState("");
+  const [mail, setMail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     //validar todos los input
-    if (validarNombre(nombreContacto) && validarNumero(telefonoContacto)) {
+    if (
+      validarNombre(nombreContacto) &&
+      validarNumero(telefonoContacto) &&
+      validarComentario(comentarios)
+    ) {
       acierto();
       const contactoNuevo = {
         from_name: nombreContacto,
-        message: telefonoContacto,
+        telefono: telefonoContacto,
+        message: comentarios,
+        mail: mail,
       };
 
       emailjs
         .send(
-          "service_pt41qrm",
+          "service_26rlmp1",
           "template_kenlejx",
           contactoNuevo,
-          "user_OVQcZD71YLsJOeqIJhZKK",
+          "user_OVQcZD71YLsJOeqIJhZKK"
         )
         .then(
           (response) => {
@@ -62,7 +73,11 @@ const Contacto = () => {
         </Form.Group>
         <Form.Group className="mb-2" controlId="formBasicEmail">
           <Form.Label>E-Mail</Form.Label>
-          <Form.Control type="email" placeholder="juanperez@gmail.com" />
+          <Form.Control
+            type="email"
+            placeholder="juanperez@gmail.com"
+            onChange={(e) => setMail(e.target.value)}
+          />
 
           <div className="valid-feedback">Este campo es correcto</div>
           <div className="invalid-feedback">Este campo es obligatorio</div>
@@ -80,7 +95,12 @@ const Contacto = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Comentarios</Form.Label>
-          <Form.Control type="text-area" placeholder="Ingrese su consulta" />
+          <Form.Control
+            type="text-area"
+            placeholder="Ingrese su consulta"
+            onChange={(e) => setComentarios(e.target.value)}
+          />
+
           <div className="valid-feedback">Este campo es correcto</div>
           <div className="invalid-feedback">Este campo es obligatorio</div>
         </Form.Group>
