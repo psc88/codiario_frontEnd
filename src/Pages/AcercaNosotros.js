@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import enrico from '../img/enricoPalermo.jfif';
-import pabloc from '../img/pabloCastillo.jfif';
-import pablod from '../img/pabloDotti.jfif';
 import gabriel from '../img/gabrielAlejandro.jfif';
 import marcelo from '../img/marceloMartinez.jfif';
+import pablod from '../img/pabloDotti.jfif';
+import pabloc from '../img/pabloCastillo.jfif';
 import '../App.css';
 
 const AcercaNosotros = () => {
