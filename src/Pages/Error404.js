@@ -43,7 +43,7 @@ const error404 = () => {
         <Col lg={12} md={12} sm={12} className="text-center my-5">
             <Link to='/' className="btn btn-warning m-2">Vover al Home</Link>
             <Link to='/' className="btn btn-warning m-2">Selector de categorias</Link>
-            <Link to='/nosotros' className="btn btn-warning m-2">Contactenos</Link>
+            <Link to='/contacto' className="btn btn-warning m-2">Contactenos</Link>
         </Col>
       </Row>
     </Container>
