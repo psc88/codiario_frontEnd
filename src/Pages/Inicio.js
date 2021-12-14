@@ -54,7 +54,9 @@ const Inicio = (props) => {
                 </article>
                 <article>
                     <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
+                    <div className='d-flex justify-content-center'>
                     <Image src={publicidadLolla} className='mb-5 d-flex justify-content-center' fluid></Image>
+                    </div>
                     <h1 className="text-center mb-5">Actualidad</h1>
                     <article className='my-5'>
                         <Row className='d-flex justify-content-center'>
@@ -87,7 +89,7 @@ const Inicio = (props) => {
                 <article>
                     <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
                     <div className='text-center'>
-                        <Image src={publicidadNaranjax} className='mb-5'></Image>
+                        <Image src={publicidadNaranjax} className='mb-5' fluid></Image>
                     </div>
                     <h1 className="text-center mb-5">Politica</h1>
                     <article className='my-5'>
