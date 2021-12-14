@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     consultarApi();
   },[]);
-
+  
   const consultarApi = async() => {
     try{
       const respuesta = await fetch(URL);
@@ -22,11 +22,11 @@ function App() {
       console.log(error);
     }
   }
-
+  
   return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<Inicio noticias={noticias}></Inicio>}></Route>
+        <Route exact path='/' element={<Inicio noticias={noticias} consultarApi={consultarApi}></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
       </Routes>
     </Router>

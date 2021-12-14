@@ -1,62 +1,105 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../App.css';
-import { Col, Row, Image, Container } from 'react-bootstrap';
+import { Image, Container, Row, Button } from 'react-bootstrap';
 import DetalleCovid from '../Components/DetalleCovid';
-import bolsonaro from '../img/bolsonaro.jpg'
-import jugadores from '../img/jugadores.jfif'
-import pobresa from '../img/pobresa.jpg'
-import publicidadYpf from '../img/publicidadYpf.png'
-import Noticias from '../Components/Noticias';
 import Paginacion from '../Components/Paginacion';
+import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif'
+import publicidadNaranjax from '../img/Publicidad/publicidadNaranjax.gif'
+import Publicidad from '../Components/Publicidad';
+import ItemNoticiasPrincipales from '../Components/ItemNoticiasPrincipales';
+import ItemNoticias from '../Components/ItemNoticias';
+
 
 const Inicio = (props) => {
     const [paginaActual, setPaginaActual] = useState(1);
     const [ultimaPagina] = useState(3);
 
+    /*FILTROS DE NOTICIAS POR CATEGORIA */
+    const noticiasPrincipales = props.noticias.filter(noticias => noticias.categoria === 'Principales');
+    const noticiasActualidad = props.noticias.filter(noticias => noticias.categoria === 'Actualidad');
+    const noticiasPolitica = props.noticias.filter(noticias => noticias.categoria === 'Politica');
+    const noticiasDeporte = props.noticias.filter(noticias => noticias.categoria === 'Deporte');
+
     const indiceUltimaPublicacion = paginaActual * ultimaPagina
     const indicePrimeraPublicacion = indiceUltimaPublicacion - ultimaPagina
-    const publicacionActual = props.noticias.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
-    
+
+    /*FUNCIONES PARA LIMITAR LAS NOTICIAS QUE SE VEAN*/
+    const cantidadNoticiasActualidad = noticiasActualidad.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
+    const cantidadNoticiasPolitica = noticiasPolitica.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
+    const cantidadNoticiasDeporte = noticiasDeporte.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
+
     const totalNoticias = props.noticias.length;
 
-    const paginas = (numeroPagina) => setPaginaActual(numeroPagina); 
+    const paginas = (numeroPagina) => setPaginaActual(numeroPagina);
 
+    /*Noticias Principales */
+    // const [paginaActualPrincipal] = useState(1);
+    // const [ultimaPaginaPrincipal, setUltimaPaginaPrincipal] = useState(0);
+
+    // const indiceUltimaPublicacionPrincipal = paginaActualPrincipal * ultimaPaginaPrincipal
+    // const indicePrimeraPublicacionPrincipal = indiceUltimaPublicacionPrincipal - ultimaPaginaPrincipal
+    // const publicacionActualPrincipal = noticiasPrincipalesx2.slice(indicePrimeraPublicacionPrincipal, indiceUltimaPublicacionPrincipal)
     return (
         <>
             <DetalleCovid></DetalleCovid>
             <Container className='mb-3'>
                 <article>
-                    <Row>
-                        <Col md={8} sm={12}>
-                            <h1>Malestar de Bolsonaro con Alberto Fernández por el acto con Lula: canceló la cumbre de presidentes del Mercosur en Brasilia</h1>
-                            <p>El gobierno brasileño confirmó que el encuentro, que iba a ser presencial, pasará a ser virtual. Alegaron que es por el avance de la Ómicron, pero en el ámbito diplomático lo vinculan a la presencia del ex mandatario en Plaza de Mayo</p>
-                            <Image src={bolsonaro} fluid ></Image>
-                            <hr className='mt-1' />
-                        </Col>
-                        <Col md={4} sm={12} >
-                            <section>
-                                <article>
-                                    <h4>Boca Juniors venció a Talleres de Córdoba por penales y es campeón de la Copa Argentina</h4>
-                                    <Image src={jugadores} fluid ></Image>
-                                    <hr className='mt-1' />
-                                </article>
-                                <article>
-                                    <h4>Unicef: Argentina tiene 3,8 millones de chicos pobres y con derechos fundamentales vulnerados</h4>
-                                    <Image src={pobresa} fluid ></Image>
-                                    <hr className='mt-1' />
-                                </article>
-                            </section>
-                        </Col>
+                    <Row className='text-center'>
+                        <h1 className='text-center'>Noticias Principales</h1>
+                        {
+                            noticiasPrincipales.map((noticias) =>
+                                <ItemNoticiasPrincipales key={noticias.id} noticias={noticias} consultarApi={props.consultarApi}></ItemNoticiasPrincipales>)
+                        }
                     </Row>
                 </article>
-                <article className='text-center bg-secondary'>
-                    <p className='fw-bold mt-2 py-3'>PUBLICIDAD</p>
-                    <a href="https://www.ypf.com/Paginas/home.aspx" rel='noreferrer' target="_blank"><Image src={publicidadYpf} className='mb-5' fluid></Image></a>
+                <article>
+                    <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
+                    <Image src={publicidadLolla} className='mb-5 d-flex justify-content-center' fluid></Image>
+                    <h1 className="text-center mb-5">Actualidad</h1>
+                    <article className='my-5'>
+                        <Row className='d-flex justify-content-center'>
+                            {
+                                cantidadNoticiasActualidad.map((noticias) =>
+                                    <ItemNoticias key={noticias.id} noticias={noticias} consultarApi={props.consultarApi}></ItemNoticias>)
+                            }
+                        </Row>
+                    </article>
+                    <article className='d-flex justify-content-center'>
+                        <Button className='fs-4'>Ver Mas</Button>
+                    </article>
                 </article>
                 <article>
-                    <Noticias noticias={publicacionActual}></Noticias>
+                    <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
+                    <Publicidad></Publicidad>
+                    <h1 className="text-center mb-5">Deporte</h1>
+                    <article className='my-5'>
+                        <Row className='d-flex justify-content-center'>
+                            {
+                                cantidadNoticiasDeporte.map((noticias) =>
+                                    <ItemNoticias key={noticias.id} noticias={noticias} consultarApi={props.consultarApi}></ItemNoticias>)
+                            }
+                        </Row>
+                    </article>
                     <article className='d-flex justify-content-center'>
-                        <Paginacion ultimaPagina={ultimaPagina} totalPublicaciones={totalNoticias} paginas={paginas}></Paginacion>
+                        <Button className='fs-4'>Ver Mas</Button>
+                    </article>
+                </article>
+                <article>
+                    <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
+                    <div className='text-center'>
+                        <Image src={publicidadNaranjax} className='mb-5'></Image>
+                    </div>
+                    <h1 className="text-center mb-5">Politica</h1>
+                    <article className='my-5'>
+                        <Row className='d-flex justify-content-center'>
+                            {
+                                cantidadNoticiasPolitica.map((noticias) =>
+                                    <ItemNoticias key={noticias.id} noticias={noticias} consultarApi={props.consultarApi}></ItemNoticias>)
+                            }
+                        </Row>
+                    </article>
+                    <article className='d-flex justify-content-center'>
+                        <Button className='fs-4'>Ver Mas</Button>
                     </article>
                 </article>
             </Container>

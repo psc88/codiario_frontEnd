@@ -1,16 +1,15 @@
 import React from 'react';
-import { Card, ListGroup, Button, Col } from "react-bootstrap";
-import bolsonaro from '../img/bolsonaro.jpg'
+import { Card, Button, Col } from "react-bootstrap";
 
 const ItemNoticias = (props) => {
     return (
         <Col md={4} sm={12}>
             <Card className='mt-2'>
-                <Card.Img variant="top" src={bolsonaro} />
+                <Card.Img variant="top" src={props.noticias.linkImagen} />
                 <Card.Body>
                     <Card.Title>{props.noticias.titulo}</Card.Title>
                     <Card.Text>
-                        {props.noticias.noticia}
+                        {props.noticias.descripcion}
                     </Card.Text>
                     <Button variant="primary">Leer Mas</Button>
                 </Card.Body>
