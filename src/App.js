@@ -6,10 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Contacto from './Pages/Contacto';
 import Footer from './Common/Footer';
 import Error404 from './Pages/Error404'
-
+import Detalle from './Pages/Detalle';
 
 function App() {
-
   return (
     
     <Router>
@@ -18,6 +17,7 @@ function App() {
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
         <Route exact path='/contacto' element={<Contacto></Contacto>}></Route>
         <Route exact path='*' element={<Error404/>}></Route>
+        <Route exacth path='/nota' element={<Detalle/>}></Route>
       </Routes>
       <Footer/>
     </Router>
