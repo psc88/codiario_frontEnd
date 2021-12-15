@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 
 const Comentario = (props) => {
   const eliminarProducto = () => {
-    console.log(props.producto.id);
     Swal.fire({
       title: "Estas seguro de eliminar el mensaje?",
       text: "No se puede recuperar el mensaje",
@@ -46,7 +45,7 @@ const Comentario = (props) => {
         {props.comentario.comentario}
       </p>
       <div>
-        <Button variant="da" onClick={() => eliminarProducto()}>
+        <Button onClick={() => eliminarProducto()}>
           x
         </Button>
       </div>

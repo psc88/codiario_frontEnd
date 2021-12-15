@@ -11,26 +11,28 @@ import {useState, useEffect} from 'react';
 
 const Detalle = () => {
     const [comentarios,setComentarios] = useState([]);
-    const URL = process.env.REACT_APP_API_URL
+    const URLc = process.env.REACT_APP_API_URL
     useEffect(()=>{
       consultarAPI()
     },[])
   
     const consultarAPI = async() =>{
       try{
-        const respuesta = await fetch(URL);
-        const datos = await respuesta.json();
-        setComentarios(datos)
+        const respuestaC = await fetch(URLc);
+        const datosC = await respuestaC.json();
+        setComentarios(datosC)
       }catch(error){
         console.log(error)
       }
     }
+   
 
     return (
         <Container>
             <Row>
                 <Col lg={12} className='mt-5'>
-                    <Titulo/>
+                    <Titulo />
+
                 </Col>
             </Row>
             <Row>

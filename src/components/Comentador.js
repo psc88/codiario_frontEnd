@@ -3,7 +3,7 @@ import { Form, Button, Container,} from "react-bootstrap";
 import { validarComentario, validarNombre } from "../Helpers/helpers";
 import Swal from "sweetalert2";
 
-const Comentario = (props) => {
+const Comentador= (props) => {
   const [nombreComentador, setNombreComentador] = useState("");
   const [comentario, setComentario] = useState("");
   const URL = process.env.REACT_APP_API_URL;
@@ -26,7 +26,7 @@ const Comentario = (props) => {
         const respuesta = await fetch(URL, parametro);
         
         if (respuesta.status === 201) {
-          Swal.fire("Exito", "Producto creado correctamente!", "success");
+          Swal.fire("Exito", "Comentario enviado correctamente!", "success");
           e.target.reset()
           props.consultarAPI()
 
@@ -69,4 +69,4 @@ const Comentario = (props) => {
   );
 };
 
-export default Comentario;
+export default Comentador;
