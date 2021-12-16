@@ -1,0 +1,60 @@
+{
+  "noticias": [
+    {
+      "tituloNoticia": "Alerta roja por una cepa nueva",
+      "descripcionNoticia": "Se ha detectado una nueva sepa de covid-19 proveniente de Sudafrica",
+      "urlNoticia": "https://image.shutterstock.com/image-photo/medicine-doctor-robotics-research-analysis-600w-1673968429.jpg",
+      "categoria": "salud",
+      "id": 5
+    },
+    {
+      "tituloNoticia": "kjashd",
+      "descripcionNoticia": "kjwahdkj",
+      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "actualidad",
+      "id": 6
+    },
+    {
+      "tituloNoticia": "idgashjd",
+      "descripcionNoticia": "kjdhsakjd",
+      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "tecnologia",
+      "id": 7
+    },
+    {
+      "tituloNoticia": "kjsdkasd",
+      "descripcionNoticia": "sadjshdjs",
+      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "deportes",
+      "id": 8
+    },
+    {
+      "tituloNoticia": "kjsahkjsd",
+      "descripcionNoticia": "kjsgdajhgsad",
+      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "politica",
+      "id": 9
+    },
+    {
+      "tituloNoticia": "kfjhsa",
+      "descripcionNoticia": "kjsahd",
+      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "economia",
+      "id": 10
+    },
+    {
+      "tituloNoticia": "sacasc",
+      "descripcionNoticia": "saasdsa",
+      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "salud",
+      "id": 11
+    },
+    {
+      "tituloNoticia": "kaghdjhs",
+      "descripcionNoticia": "sajdsajd",
+      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "fotografia",
+      "id": 12
+    }
+  ]
+}

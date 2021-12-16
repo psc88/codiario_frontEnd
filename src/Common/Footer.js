@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
 
-        <footer className="bg-dark text-light text-center py-5">
+        <footer className="bg-dark text-light text-center py-5 mt-5">
             <section className='container'>
                 <section className='row'>
                     <div className='col-lg-4 col-sm-12 my-3'>
@@ -51,7 +51,7 @@ const Footer = () => {
                     <div className='my-2 col-lg-4 col-sm-12 d-flex flex-column'>
                         <h6>General Paz 576, piso 9 - oficina 2, San Miguel de Tucumán (CP-4000) , Tucumán</h6>
                         <Link to='*' className='text-light text-decoration-none'><FontAwesomeIcon icon={faEnvelopeSquare} className='m-2 fa-2x text-decoration-none' />codiario@gmail.com</Link>
-                        <Link to='*' className='text-light text-decoration-none'><FontAwesomeIcon icon={faWhatsappSquare} className='m-2 fa-2x text-decoration-none' />381512345</Link>
+                        <Link to='*' className='text-light text-decoration-none'><FontAwesomeIcon icon={faWhatsappSquare} className='m-2 fa-2x text-decoration-none' />3815123456</Link>
                         </div>
                 </section>
                 <p className='mt-5'>&copy; Todos los derechos reservados</p>
