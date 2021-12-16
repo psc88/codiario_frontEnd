@@ -7,7 +7,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Login from './Pages/Login';
-import NavbarInicio from './components/common/NavbarInicio';
+import NavbarInicio from './Components/common/NavbarInicio';
 
 function App() {
   return (
