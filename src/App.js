@@ -1,5 +1,4 @@
 import './App.css';
-import Navigation from './components/common/Navigation';
 import Inicio from './Pages/Inicio';
 import AcercaNosotros from './Pages/AcercaNosotros';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
