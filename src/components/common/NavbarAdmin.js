@@ -34,8 +34,7 @@ const NavbarAdmin = () =>{
              </Navbar.Collapse>
              </Container>
             </Navbar>
-
-            <h1>Aqui lleva mensaje de bienvenida</h1>
+            
       </>
         
     );

@@ -10,7 +10,7 @@ import { NavDropdown } from "react-bootstrap";
 import logo from "../../img/Logo.png"
 import { Button } from "react-bootstrap";
 
-const Navigation = () =>{
+const NavbarInicio= () =>{
     return(
         <>
            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -56,4 +56,4 @@ const Navigation = () =>{
 };  
 
 
-export default Navigation; 
+export default NavbarInicio; 
