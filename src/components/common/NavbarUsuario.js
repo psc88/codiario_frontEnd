@@ -34,10 +34,10 @@ const NavbarUsuario = () =>{
                  <Link to="/tecnologia" className="nav-link">Tecnología</Link>
                  <Link to="/deportes" className="nav-link">Deportes</Link>
                  <NavDropdown title="+ Secciones" id="collasible-nav-dropdown">
-                   <NavDropdown.Item href="#action/3.1">Política</NavDropdown.Item>
-                   <NavDropdown.Item href="#action/3.2">Economía</NavDropdown.Item>
-                   <NavDropdown.Item href="#action/3.3">Salud</NavDropdown.Item>
-                   <NavDropdown.Item href="#action/3.4">Fotografías</NavDropdown.Item>
+                   <NavDropdown.Item href="*/3.1">Política</NavDropdown.Item>
+                   <NavDropdown.Item href="*/3.2">Economía</NavDropdown.Item>
+                   <NavDropdown.Item href="*/3.3">Salud</NavDropdown.Item>
+                   <NavDropdown.Item href="*/3.4">Fotografías</NavDropdown.Item>
                  </NavDropdown>
                </Nav>
                <Link to="/nosotros" className="btn btn-primary m-1">Acerca de Nosotros</Link>

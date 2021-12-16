@@ -1,14 +1,11 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import React from "react";
 import { Link } from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import $ from 'jquery';
-import Popper from 'popper.js';
-import { NavDropdown } from "react-bootstrap";
 import logo from "../../img/Logo.png"
-import { Button } from "react-bootstrap";
+
 
 const Navigation = () =>{
     return(
@@ -42,11 +39,9 @@ const Navigation = () =>{
                  </NavDropdown>
                </Nav>
                <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
-               <Button variant="primary" type="submit" className="w-30 m-10">
-                    Suscribirse</Button>
-               <Button variant="warning" type="submit" className="w-30">
-                    Iniciar Seción</Button>
-               
+               <Link to="" className="btn btn-primary">Suscribirse</Link> 
+               <Link to="/login" className="btn btn-warning">Iniciar Sesión</Link>   
+                          
              </Navbar.Collapse>
              </Container>
             </Navbar>
