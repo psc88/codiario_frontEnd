@@ -12,14 +12,17 @@ const NavbarAdmin = () =>{
         <>
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
              <Container>
-             <Navbar.Brand href="#home">
-             <img
+             <Navbar.Brand >
+               <Link to="/">
+                 <img
                    src={logo}
                    width="120"
                    height="56"
                    className="d-inline-block align-top"
                    alt="<CoDiario>"
                  />
+               </Link>
+             
              </Navbar.Brand>
              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
              <Navbar.Collapse id="responsive-navbar-nav">
@@ -29,8 +32,8 @@ const NavbarAdmin = () =>{
                  <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
                   <Link to="/contacto" className="nav-link">Contacto</Link>
                 </Nav>
-                <Link to="" className="btn btn-primary">Nueva noticia</Link> 
-                 <Link to="" className="btn btn-warning">Nueva Categoria</Link>
+                <Link to="" className="btn btn-primary m-1">Nueva noticia</Link> 
+                 <Link to="" className="btn btn-warning m-1">Nueva Categoria</Link>
              </Navbar.Collapse>
              </Container>
             </Navbar>

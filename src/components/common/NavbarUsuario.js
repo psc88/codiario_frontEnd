@@ -48,6 +48,7 @@ const NavbarUsuario = () =>{
              </Navbar.Collapse>
              </Container>
             </Navbar>
+
       </>
         
     );
