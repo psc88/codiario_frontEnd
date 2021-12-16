@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import logo from "../../img/Logo.png"
 
 
-const Navigation = () =>{
+const NavbarInicio= () =>{
     return(
         <>
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -51,4 +51,4 @@ const Navigation = () =>{
 };  
 
 
-export default Navigation; 
+export default NavbarInicio; 
