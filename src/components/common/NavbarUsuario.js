@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import $ from 'jquery';
-import Popper from 'popper.js';
 import { NavDropdown } from "react-bootstrap";
 import logo from "../../img/Logo.png"
 import { Button } from "react-bootstrap";
@@ -42,9 +40,9 @@ const NavbarUsuario = () =>{
                    <NavDropdown.Item href="#action/3.4">Fotografías</NavDropdown.Item>
                  </NavDropdown>
                </Nav>
-               <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
-               <Link to="/contacto" className="nav-link">Contacto</Link>
-               <Link to="" className="btn btn-primary">Suscribirse</Link> 
+               <Link to="/nosotros" className="btn btn-primary m-1">Acerca de Nosotros</Link>
+               <Link to="/contacto" className="btn btn-warning">Contacto</Link>
+               
              </Navbar.Collapse>
              </Container>
             </Navbar>
