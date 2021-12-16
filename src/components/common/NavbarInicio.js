@@ -39,7 +39,7 @@ const NavbarInicio= () =>{
                  </NavDropdown>
                </Nav>
                <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
-               <Link to="" className="btn btn-primary">Suscribirse</Link> 
+               <Link to="" className="btn btn-primary">Contacto</Link> 
                <Link to="/login" className="btn btn-warning">Iniciar Sesión</Link>   
                           
              </Navbar.Collapse>
