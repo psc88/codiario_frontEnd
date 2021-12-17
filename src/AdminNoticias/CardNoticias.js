@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button, Col } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const CardNoticias = (props) => {
@@ -39,6 +39,11 @@ const CardNoticias = (props) => {
                     };
                 }catch(error){
                     console.log(error)
+                    Swal.fire(
+                        'Oops algo salio mal!',
+                        'icon: error',
+                        'danger'
+                      )
                 }
             }
           })
@@ -53,7 +58,7 @@ const CardNoticias = (props) => {
                 <Card.Text>
                     {props.noticia.descripcionNoticia}
                 </Card.Text>
-                {/* <Link to={`/adminNoticias/editar/${props.notica.id}`} className='btn btn-warning me-2'>Editar</Link> */}
+                <Link to={`/admin/editarNoticia/${props.noticia.id}`} className='btn btn-warning me-2'>Editar</Link>
                 <Button variant="danger" onClick={()=> borrarNoticia()}>Borrar</Button>
             </Card.Body>
         </Card>

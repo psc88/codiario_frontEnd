@@ -39,7 +39,6 @@ const validarTituloNoticia = (dato) => {
 const validarURL = (dato) => {
 
   let expReg = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
-  console.log(dato);
 
   if (dato.trim() != '' && expReg.test(dato.trim())) {
 
