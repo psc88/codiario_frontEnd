@@ -10,6 +10,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import {useState, useEffect} from 'react';
 import Contacto  from '../src/Pages/Contacto';
 import Error404 from '../src/Pages/Error404'
+import Footer from '../src/Common/Footer';
 
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route exact path='/contacto' element={<Contacto></Contacto>}></Route>
         <Route exact path='*' element={<Error404/>}></Route>
       </Routes>
+        <Footer></Footer>
     </Router>
   );
 }
