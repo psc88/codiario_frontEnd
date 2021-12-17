@@ -40,8 +40,8 @@ const NavbarUsuario = () =>{
                    <NavDropdown.Item href="*/3.4">Fotografías</NavDropdown.Item>
                  </NavDropdown>
                </Nav>
-               <Link to="/nosotros" className="btn btn-primary m-1">Acerca de Nosotros</Link>
-               <Link to="/contacto" className="btn btn-warning">Contacto</Link>
+               <Link to="/nosotros"><Button variant="primary m-1">Acerca de Nosotros</Button></Link>
+               <Link to="/contacto"><Button variant="warning ">Contacto</Button></Link>
                
              </Navbar.Collapse>
              </Container>
