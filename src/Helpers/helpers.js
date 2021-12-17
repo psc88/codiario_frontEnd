@@ -47,14 +47,14 @@ const error = () => {
 export {validarMail, validarComentario, error, acierto, validarNombre, validarNumero };
 
 // Funcion para validar campos
-const validarCampoRequerido= (dato) =>{
+export const validarCampoRequerido= (dato) =>{
   if(dato.trim().length >0){
       return true
   }else
   {return false}
 }
 
-function validarEmail (dato){
+ export function validarEmail (dato){
   // expresion regular
   let Email = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
   if(Email.test(dato)){
@@ -65,8 +65,8 @@ function validarEmail (dato){
   }
 }; 
 
-function validarContraseña(dato){
-  // expresion regular
+export function validarContraseña(dato){
+    // expresion regular
   let Contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   // Entre 8 y 16 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales
  
@@ -79,4 +79,3 @@ function validarContraseña(dato){
   }
 };
 
-export {validarCampoRequerido, validarEmail, validarContraseña};

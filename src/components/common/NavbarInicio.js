@@ -51,4 +51,5 @@ const NavbarInicio= () =>{
          </>
         );
 };  
-export default NavbarInicio; 
+
+export default NavbarInicio;
