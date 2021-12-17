@@ -2,10 +2,10 @@ import React from 'react';
 import muestra from '../img/imgPrueba.png'
 
 
-const Foto = () => {
+const Foto = (props) => {
     return (
         <div>
-           <img src={muestra} alt="" /> 
+           <img src={props.noticiaSeleccionada.linkImagen} alt="" /> 
         </div>
     );
 };

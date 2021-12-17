@@ -16,7 +16,7 @@ const Comentario = (props) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const URL = process.env.REACT_APP_API_URL + "/" + props.comentario.id;
+          const URL = process.env.REACT_APP_API_URL + "/comentarios/" + props.comentario.id
           const respuesta = await fetch(URL, {
             method: "DELETE",
             headers: {
