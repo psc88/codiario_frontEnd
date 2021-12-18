@@ -11,7 +11,7 @@ import Login from './Pages/Login';
 import NavbarInicio from './Components/common/NavbarInicio';
 import {useState, useEffect} from 'react';
 import Contacto from './Pages/Contacto';
-import Footer from './Common/Footer';
+import Footer from '../src/Components/common/Footer';
 import Error404 from './Pages/Error404';
 
 
@@ -38,6 +38,7 @@ function App() {
 
   return (
     <Router>
+      
       <NavbarUsuario></NavbarUsuario>
       <Routes>
       <Route exact path='/' element={<Inicio noticias={noticias} consultarApi={consultarApi}></Inicio>}></Route>
