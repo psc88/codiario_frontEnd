@@ -10,7 +10,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import {useState, useEffect} from 'react';
 import Contacto  from '../src/Pages/Contacto';
 import Error404 from '../src/Pages/Error404'
-import Footer from '../src/Common/Footer';
+import Footer from '../src/Components/common/Footer';
 
 
 
