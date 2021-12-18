@@ -11,7 +11,6 @@ import {useState, useEffect} from 'react';
 import Contacto  from '../src/Pages/Contacto';
 import Error404 from '../src/Pages/Error404'
 import Footer from '../src/Components/common/Footer';
-import NavbarUsuario from './Components/common/NavbarUsuario';
 
 
 
@@ -35,7 +34,7 @@ function App() {
 
   return (
     <Router>
-      <NavbarUsuario></NavbarUsuario>
+      <NavbarAdmin></NavbarAdmin>
       <Routes>
         <Route exact path='/' element={<Inicio noticias={noticias}></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
