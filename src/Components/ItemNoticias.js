@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Button, Col } from "react-bootstrap";
+import { Card,Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ItemNoticias = (props) => {
     return (
@@ -11,7 +12,8 @@ const ItemNoticias = (props) => {
                     <Card.Text>
                         {props.noticias.descripcion}
                     </Card.Text>
-                    <Button variant="primary">Leer Mas</Button>
+                    
+                    <Link to={`/nota/${props.noticias.id}`} className='btn btn-primary'>Leer mas</Link>
                 </Card.Body>
             </Card>
         </Col>

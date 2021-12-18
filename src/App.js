@@ -8,15 +8,15 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import {useState, useEffect} from 'react';
-import Contacto  from '../src/Pages/Contacto';
-import Error404 from '../src/Pages/Error404'
+import Contacto from './Pages/Contacto';
 import Footer from '../src/Components/common/Footer';
-
-
+import Error404 from './Pages/Error404'
+import Detalle from './Pages/Detalle';
 
 function App() {
-  const [noticias, setNoticias] = useState([]);
-  const URL = process.env.REACT_APP_API_URL;
+   const [noticias, setNoticias] = useState([]);
+  const URL = process.env.REACT_APP_API_URL + "/noticias";
+
 
   useEffect(() => {
     consultarApi();
@@ -40,6 +40,7 @@ function App() {
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
         <Route exact path='/contacto' element={<Contacto></Contacto>}></Route>
         <Route exact path='*' element={<Error404/>}></Route>
+        <Route exacth path='/nota/:id' element={<Detalle noticias={noticias}/>}></Route>
       </Routes>
         <Footer></Footer>
     </Router>

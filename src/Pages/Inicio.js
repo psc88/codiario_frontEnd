@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 import { Image, Container, Row, Button } from 'react-bootstrap';
-import DetalleCovid from '../Components/DetalleCovid';
+import DetalleCovid from '../Components/DetalleCovid'
 import Paginacion from '../Components/Paginacion';
 import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif'
 import publicidadNaranjax from '../img/Publicidad/publicidadNaranjax.gif'
