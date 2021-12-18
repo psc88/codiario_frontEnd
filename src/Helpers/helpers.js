@@ -44,4 +44,29 @@ const error = () => {
   });
 };
 
-export {validarMail, validarComentario, error, acierto, validarNombre, validarNumero };
+const validarTituloNoticia = (dato) => {
+  if (dato.trim().length > 0 && dato.trim().length <= 150) {
+
+    return true;
+  } else {
+
+    return false;
+  }
+};
+
+const validarURL = (url) => {
+
+  let expReg = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
+
+  if (expReg.test(url.trim())) {
+
+    return true;
+
+  } else {
+
+    return false;
+  }
+
+}
+
+export { error, acierto, validarNombre, validarNumero, validarTituloNoticia, validarURL, validarComentario, validarMail }
