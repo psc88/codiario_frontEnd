@@ -1,5 +1,5 @@
 import './App.css';
-import NavbarAdmin from './Components/common/NavbarAdmin';
+import NavbarAdmin from '../src/Components/common/NavbarAdmin';
 import Inicio from './Pages/Inicio';
 import AcercaNosotros from './Pages/AcercaNosotros';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
