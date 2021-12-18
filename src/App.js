@@ -1,4 +1,5 @@
 import './App.css';
+import NavbarUsuario from './Components/common/NavbarUsuario';
 import Inicio from './Pages/Inicio';
 import AcercaNosotros from './Pages/AcercaNosotros';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -22,6 +23,7 @@ function App() {
   useEffect(() => {
     consultarApi();
   },[]);
+  
 
   const consultarApi = async() => {
     try{
@@ -31,13 +33,14 @@ function App() {
     } catch(error){
       console.log(error);
     }
-  }
+  };
+
 
   return (
     <Router>
-      <NavbarInicio></NavbarInicio>
+      <NavbarUsuario></NavbarUsuario>
       <Routes>
-        <Route exact path='/' element={<Inicio noticias={noticias}></Inicio>}></Route>
+      <Route exact path='/' element={<Inicio noticias={noticias} consultarApi={consultarApi}></Inicio>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
         <Route exact path='/contacto' element={<Contacto></Contacto>}></Route>
         <Route exact path='/login' element={<Login></Login>}></Route>
@@ -46,6 +49,6 @@ function App() {
       <Footer/>
     </Router>
   );
-}
+};
 
 export default App;
