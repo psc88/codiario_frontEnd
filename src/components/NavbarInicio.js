@@ -1,17 +1,13 @@
-import { Navbar, Nav, Container, } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
 import React from "react";
 import { Link } from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import $ from 'jquery';
-import Popper from 'popper.js';
-import { NavDropdown } from "react-bootstrap";
 import logo from "../../img/Logo.png"
-import { Button } from "react-bootstrap";
 
 
-const NavbarUsuario = () =>{
+const NavbarInicio= () =>{
     return(
         <>
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -36,23 +32,24 @@ const NavbarUsuario = () =>{
                  <Link to="/tecnologia" className="nav-link">Tecnología</Link>
                  <Link to="/deportes" className="nav-link">Deportes</Link>
                  <NavDropdown title="+ Secciones" id="collasible-nav-dropdown">
-                   <NavDropdown.Item href="#action/3.1">Política</NavDropdown.Item>
-                   <NavDropdown.Item href="#action/3.2">Economía</NavDropdown.Item>
-                   <NavDropdown.Item href="#action/3.3">Salud</NavDropdown.Item>
-                   <NavDropdown.Item href="#action/3.4">Fotografías</NavDropdown.Item>
+                   <NavDropdown.Item href="*/3.1">Política</NavDropdown.Item>
+                   <NavDropdown.Item href="*/3.2">Economía</NavDropdown.Item>
+                   <NavDropdown.Item href="*/3.3">Salud</NavDropdown.Item>
+                   <NavDropdown.Item href="*/3.4">Fotografías</NavDropdown.Item>
                  </NavDropdown>
-               </Nav>
-               <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
-               <Link to="/contacto" className="nav-link">Contacto</Link>
-               <Link to="" className="btn btn-primary">Suscribirse</Link> 
-             </Navbar.Collapse>
+                </Nav>
+                  <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
+                  <Link to="/contacto">
+                    <Button className="primary m-1">Contacto</Button>
+                   </Link> 
+                  <Link to="/login">
+                     <Button variant="warning m-1">Ingresar</Button>
+                   </Link>   
+                 </Navbar.Collapse>
              </Container>
-            </Navbar>
-
-      </>
-        
-    );
+          </Navbar>
+         </>
+        );
 };  
 
-
-export default NavbarUsuario; 
+export default NavbarInicio;

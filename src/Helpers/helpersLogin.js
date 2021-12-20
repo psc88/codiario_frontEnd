@@ -1,21 +1,12 @@
 import Swal from "sweetalert2";
 
-// Funcion para validar campos
-const validarCampoRequerido= (dato) =>{
-  if(dato.trim().length > 0 && dato.trim().length < 100){
-      return true
-  }else{
-    return false}
-}
-
 const validarNombre = (dato) => {
-  if (dato.trim().length > 0 && dato.trim().length < 50) {
+  if (dato.trim().length > 0) {
     return true;
   } else {
     return false;
   }
 };
-
 
 
 const validarComentario = (dato) => {
@@ -27,7 +18,7 @@ const validarComentario = (dato) => {
 };
 
 const validarNumero = (dato) => {
-  if (dato > 0 && dato <= 20) return true;
+  if (dato > 0 && dato <= 50000000000000000) return true;
   else return false;
 };
 
@@ -44,33 +35,15 @@ const error = () => {
   });
 };
 
-const validarTituloNoticia = (dato) => {
-  if (dato.trim().length > 0 && dato.trim().length <= 150) {
-
-    return true;
-  } else {
-
-    return false;
-  }
-};
-
-const validarURL = (url) => {
-
-  let expReg = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
-
-  if (expReg.test(url.trim())) {
-
-    return true;
-
-  } else {
-
-    return false;
-  }
-
+// Funcion para validar campos
+const validarCampoRequerido= (dato) =>{
+  if(dato.trim().length >0){
+      return true
+  }else
+  {return false}
 }
 
-
- function validarEmail (dato){
+function validarEmail (dato){
   // expresion regular
   let Email = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
   if(Email.test(dato)){
@@ -83,10 +56,10 @@ const validarURL = (url) => {
 
 function validarContraseña(dato){
     // expresion regular
-  let contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+  let Contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   // Entre 8 y 16 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales
  
-  if(dato.trim() != '' && contraseña.test(dato.trim())){
+  if(dato.trim() != ''){
    
     return true;
   } else {
@@ -95,4 +68,4 @@ function validarContraseña(dato){
   }
 };
 
-export { error, acierto, validarNombre, validarNumero, validarTituloNoticia, validarURL, validarComentario, validarCampoRequerido, validarEmail, validarContraseña }
+export default {validarCampoRequerido, validarComentario, validarContraseña, validarEmail, validarNombre, validarNumero, acierto, error }

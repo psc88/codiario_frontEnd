@@ -79,6 +79,8 @@ const EditarNoticia = (props) => {
           <Form.Label>Titulo*</Form.Label>
           <Form.Control
             type="text"
+            minLength={5}
+            maxLength={150}
             placeholder="El dolar se volvio a disparar"
             defaultValue={noticia.tituloNoticia}
             ref={tituloNoticiaRef}
@@ -87,7 +89,10 @@ const EditarNoticia = (props) => {
         <Form.Group className="mb-3">
           <Form.Label>Descripcion*</Form.Label>
           <Form.Control
+            as='textarea'
             type="text"
+            minLength={20}
+            maxLength={3000}
             placeholder="Una vez mas, el dolar volvio a superar la barrera de los..."
             defaultValue={noticia.descripcionNoticia}
             ref={descripcionNoticiaRef}
