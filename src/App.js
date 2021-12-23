@@ -1,5 +1,5 @@
 import './App.css';
-import NavbarAdmin from './Components/Common/NavbarAdmin';
+import NavbarAdmin from './Components/NavbarAdmin';
 import Inicio from './Pages/Inicio';
 import AcercaNosotros from './Pages/AcercaNosotros';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Contacto from './Pages/Contacto';
-import Footer from './Components/Common/Footer';
+import Footer from './Components/common/Footer';
 import Admin from './Pages/Admin';
 import AgregarNoticia from './AdminNoticias/AgregarNoticia';
 import EditarNoticia from './AdminNoticias/EditarNoticia';
