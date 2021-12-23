@@ -6,7 +6,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import { NavDropdown } from "react-bootstrap";
-import logo from "../../img/Logo.png"
+import logo from "../img/Logo.png"
 import { Button } from "react-bootstrap";
 
 const NavbarUsuario = () =>{

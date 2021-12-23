@@ -3,7 +3,7 @@ import { Container} from "react-bootstrap";
 import '../App.css';
 import { Form, Button } from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
-import {validarEmail, validarContraseña, filtrarUsuario} from "../Components/common/Helpers/helpersLogin";
+import { validarEmail, validarContraseña } from "../Helpers/helpers";
 
 
 
