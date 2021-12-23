@@ -20,7 +20,7 @@ const LoginRegistro = () => {
 
   const handleSubmit = async(e)=>{
       e.preventDefault();
-      console.log('prueba')
+      //console.log('prueba')
       //valida los campos
       if(validarCampoRequerido(NombreYApellido) &&
       validarCampoRequerido(Edad) &&
