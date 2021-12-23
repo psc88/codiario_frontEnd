@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Form, Alert, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { validarEmail, validarEmail, validarCampoRequerido } from " ../Helpers/helpersLogin";
+import { validarEmail, validarContraseña, validarCampoRequerido } from "../Helpers/helpers";
 import Swal from 'sweetalert2'
 
 const LoginRegistro = () => {
