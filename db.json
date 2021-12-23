@@ -1,74 +1,76 @@
 {
-  "noticias": [
+  "usuarios": [
     {
-      "tituloNoticia": "Alerta roja por una cepa nueva",
-      "descripcionNoticia": "Se ha detectado una nueva sepa de covid-19 proveniente de Sudafrica",
-      "urlNoticia": "https://image.shutterstock.com/image-photo/medicine-doctor-robotics-research-analysis-600w-1673968429.jpg",
-      "categoria": "salud",
-      "id": 5
+      "id": 1,
+      "NombreYApellido": "Marcelo Martinez",
+      "Edad": "37",
+      "Ciudad": "San Miguel de Tucuman",
+      "Email": "marcelo@codiario.com",
+      "Contraseña": "191919"
     },
     {
-      "tituloNoticia": "Otra muerte mas",
-      "descripcionNoticia": "La inseguridad se cobro otra victima",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "deportes",
-      "id": 6
+      "id": 2,
+      "NombreYApellido": "Enrico Palermo",
+      "Edad": "27",
+      "Ciudad": "San Miguel de Tucuman",
+      "Email": "enrico@codiario.com",
+      "Contraseña": "191919"
     },
     {
-      "tituloNoticia": "hola como estas?",
-      "descripcionNoticia": "perfecto",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "economia",
-      "id": 8
+      "id": 23,
+      "NombreYApellido": "Gabriel Gomez",
+      "Edad": "29",
+      "Ciudad": "San Miguel de Tucuman",
+      "Email": "gabriel@codiario.com",
+      "Contraseña": "191919"
     },
     {
-      "tituloNoticia": "buenos dias",
-      "descripcionNoticia": "holaaaaaaaaaaa",
-      "urlNoticia": "https://image.shutterstock.com/image-photo/businessman-on-blurred-background-holograms-600w-760421251.jpg",
-      "categoria": "deportes",
-      "id": 9
+      "NombreYApellido": "angel padilla",
+      "Edad": "14",
+      "Ciudad": "san miguel de tucuman",
+      "Email": "padillaa@hotmail.com",
+      "Contraseña": "angelpadilla14",
+      "id": 24
     },
     {
-      "tituloNoticia": "codiario",
-      "descripcionNoticia": "codiario",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "economia",
-      "id": 10
+      "NombreYApellido": "pedro diaz",
+      "Edad": "52",
+      "Ciudad": "salta",
+      "Email": "diazpedro@gmail.com",
+      "Contraseña": "144diazpedro",
+      "id": 25
     },
     {
-      "tituloNoticia": "hola hola",
-      "descripcionNoticia": "como va?",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "economia",
-      "id": 11
+      "NombreYApellido": "pedro alvarez",
+      "Edad": "45",
+      "Ciudad": "tucuman",
+      "Email": "pedroalva@gmail.com",
+      "Contraseña": "sffgfgdgd154",
+      "id": 26
     },
     {
-      "tituloNoticia": "noticia de ",
-      "descripcionNoticia": "noticia",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "fotografia",
-      "id": 12
+      "NombreYApellido": "Pablo Castillo",
+      "Edad": "24",
+      "Ciudad": "san salvador de jujuy",
+      "Email": "pabloc@codiario.com",
+      "Contraseña": "191919",
+      "id": 27
     },
     {
-      "tituloNoticia": "hola",
-      "descripcionNoticia": "hola",
-      "urlNoticia": "https://image.shutterstock.com/image-photo/medicine-doctor-robotics-research-analysis-600w-1673968429.jpg",
-      "categoria": "economia",
-      "id": 13
+      "NombreYApellido": "pablod@gmail.com",
+      "Edad": "32",
+      "Ciudad": "CABA",
+      "Email": "pablod@codiario.com",
+      "Contraseña": "191919",
+      "id": 28
     },
     {
-      "tituloNoticia": "Hola de nuevo",
-      "descripcionNoticia": "hellow",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "actualidad",
-      "id": 14
-    },
-    {
-      "tituloNoticia": "el kks",
-      "descripcionNoticia": "el kks",
-      "urlNoticia": "     https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "politica",
-      "id": 15
+      "NombreYApellido": "carla juarez",
+      "Edad": "25",
+      "Ciudad": "ssan miguel de tucuman",
+      "Email": "carlitaj@gmail.com",
+      "Contraseña": "CarlitaJ1414",
+      "id": 29
     }
   ]
 }
