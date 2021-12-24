@@ -111,6 +111,14 @@
       "Email": "lored@hotmail.com",
       "Contraseña": "LoreD6963",
       "id": 34
+    },
+    {
+      "NombreYApellido": "rodrigo martinez",
+      "Edad": "31",
+      "Ciudad": "banda del rio sali",
+      "Email": "martrodri@hotmail.com",
+      "Contraseña": "Rodri5153",
+      "id": 35
     }
   ]
 }
