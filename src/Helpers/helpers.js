@@ -16,8 +16,6 @@ const validarNombre = (dato) => {
   }
 };
 
-
-
 const validarComentario = (dato) => {
   if (dato.trim().length > 0) {
     return true;
@@ -61,14 +59,10 @@ const validarURL = (url) => {
   if (expReg.test(url.trim())) {
 
     return true;
-
   } else {
-
     return false;
   }
-
 }
-
 
  function validarEmail (dato){
   // expresion regular
@@ -86,7 +80,7 @@ function validarContraseña(dato){
   let contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   // Entre 8 y 16 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales
  
-  if(dato.trim() != '' && contraseña.test(dato.trim())){
+  if(dato.trim() !== '' && contraseña.test(dato.trim())){
    
     return true;
   } else {
