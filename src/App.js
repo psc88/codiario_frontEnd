@@ -50,7 +50,7 @@ function App() {
   return (
     <Router>
       <NavbarInicio></NavbarInicio>
-      <NavbarAdmin></NavbarAdmin>
+      
       <Routes>
         {/*<Route exact path='/' element={<Inicio consultarAPI={consultarAPI} noticias={noticias}></Inicio>}></Route>*/}
         

@@ -71,6 +71,46 @@
       "Email": "carlitaj@gmail.com",
       "Contraseña": "CarlitaJ1414",
       "id": 29
+    },
+    {
+      "NombreYApellido": "alvarez martin",
+      "Edad": "35",
+      "Ciudad": "smt",
+      "Email": "alvarezm@gmail.com",
+      "Contraseña": "AlvarezM1414",
+      "id": 30
+    },
+    {
+      "NombreYApellido": "marina mittelmann",
+      "Edad": "45",
+      "Ciudad": "smt",
+      "Email": "marinamitt@gmail.com",
+      "Contraseña": "MarinaM1414",
+      "id": 31
+    },
+    {
+      "NombreYApellido": "elvis cochuelo",
+      "Edad": "50",
+      "Ciudad": "smt",
+      "Email": "elvisc@gmail.com",
+      "Contraseña": "Elvis875",
+      "id": 32
+    },
+    {
+      "NombreYApellido": "ruben alvarez",
+      "Edad": "60",
+      "Ciudad": "smt",
+      "Email": "rubealva@yhaoo.com.ar",
+      "Contraseña": "Rube9898",
+      "id": 33
+    },
+    {
+      "NombreYApellido": "lorena diaz",
+      "Edad": "33",
+      "Ciudad": "las talitas",
+      "Email": "lored@hotmail.com",
+      "Contraseña": "LoreD6963",
+      "id": 34
     }
   ]
 }
