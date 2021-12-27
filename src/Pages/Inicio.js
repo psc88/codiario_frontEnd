@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
-import { Image, Container, Row, Button } from 'react-bootstrap';
+import { Image, Container, Row } from 'react-bootstrap';
 import DetalleCovid from '../Components/DetalleCovid'
 import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif'
 import publicidadNaranjax from '../img/Publicidad/publicidadNaranjax.gif'
@@ -11,28 +11,80 @@ import { Link } from 'react-router-dom';
 
 
 const Inicio = (props) => {
-    const [paginaActual, setPaginaActual] = useState(1);
+    const [paginaActual] = useState(1);
     const [ultimaPagina] = useState(3);
-    console.log(props.noticias)
-    
+    const [paginaActualPrincipal] = useState(1);
+    const [ultimaPaginaPrincipal] = useState(4);
 
     /*FILTROS DE NOTICIAS POR CATEGORIA */
     const noticiasPrincipales = props.noticias.filter(noticias => noticias.categoria === 'Principales');
     const noticiasActualidad = props.noticias.filter(noticias => noticias.categoria === 'Actualidad');
     const noticiasPolitica = props.noticias.filter(noticias => noticias.categoria === 'Politica');
     const noticiasDeporte = props.noticias.filter(noticias => noticias.categoria === 'Deporte');
-    console.log(noticiasPrincipales)
-    const indiceUltimaPublicacion = paginaActual * ultimaPagina
-    const indicePrimeraPublicacion = indiceUltimaPublicacion - ultimaPagina
+    const noticiasEspectaculos = props.noticias.filter(noticias => noticias.categoria === 'Espectaculos');
+    const noticiasEconomia = props.noticias.filter(noticias => noticias.categoria === 'Economia');
+    const noticiasSalud = props.noticias.filter(noticias => noticias.categoria === 'Salud');
+    const noticiasFotografia = props.noticias.filter(noticias => noticias.categoria === 'Fotografia');
+    const noticiasTecnologia = props.noticias.filter(noticias => noticias.categoria === 'Tecnologia');
+
+    const tituloActualidad = 'Actualidad'
+    const tituloDeporte = 'Deporte'
+    const tituloPolitica = 'Politica'
+    const tituloEspectaculos = 'Espectaculos'
+    const tituloEconomia = 'Economia'
+    const tituloSalud = 'Salud'
+    const tituloFotografia = 'Fotografia'
+    const tituloTecnologia = 'Tecnologia'
 
     /*FUNCIONES PARA LIMITAR LAS NOTICIAS QUE SE VEAN*/
+    const indiceUltimaPublicacion = paginaActual * ultimaPagina
+    const indicePrimeraPublicacion = indiceUltimaPublicacion - ultimaPagina
+    const indiceUltimaPublicacionPrincipal = paginaActualPrincipal * ultimaPaginaPrincipal
+    const indicePrimeraPublicacionPrincipal = indiceUltimaPublicacionPrincipal - ultimaPaginaPrincipal
+
+    const cantidadNoticiasPrincipal = noticiasPrincipales.slice(indicePrimeraPublicacionPrincipal, indiceUltimaPublicacionPrincipal)
     const cantidadNoticiasActualidad = noticiasActualidad.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
     const cantidadNoticiasPolitica = noticiasPolitica.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
     const cantidadNoticiasDeporte = noticiasDeporte.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
 
-    const totalNoticias = props.noticias.length;
 
-    const paginas = (numeroPagina) => setPaginaActual(numeroPagina);
+    /*Funciones de filtrado de noticias para App.js */
+    const handleActualidad = () => {
+        const handleNoticiaFiltrada = props.handleNoticiaFiltrada;
+        handleNoticiaFiltrada(noticiasActualidad, tituloActualidad);
+    }
+    const handleDeporte = () => {
+        const handleNoticiaFiltrada = props.handleNoticiaFiltrada;
+        handleNoticiaFiltrada(noticiasDeporte, tituloDeporte);
+    }
+    const handlePolitica = () => {
+        const handleNoticiaFiltrada = props.handleNoticiaFiltrada;
+        handleNoticiaFiltrada(noticiasPolitica, tituloPolitica);
+    }
+    const handleEspectaculo = () => {
+        const handleNoticiaFiltrada = props.handleNoticiaFiltrada;
+        handleNoticiaFiltrada(noticiasEspectaculos, tituloEspectaculos);
+    }
+    const handleEconomia = () => {
+        const handleNoticiaFiltrada = props.handleNoticiaFiltrada;
+        handleNoticiaFiltrada(noticiasEconomia, tituloEconomia);
+    }
+    const handleSalud = () => {
+        const handleNoticiaFiltrada = props.handleNoticiaFiltrada;
+        handleNoticiaFiltrada(noticiasSalud, tituloSalud);
+    }
+    const handleFotografia = () => {
+        const handleNoticiaFiltrada = props.handleNoticiaFiltrada;
+        handleNoticiaFiltrada(noticiasFotografia, tituloFotografia);
+    }
+    const handleTecnologia = () => {
+        const handleNoticiaFiltrada = props.handleNoticiaFiltrada;
+        handleNoticiaFiltrada(noticiasTecnologia, tituloTecnologia);
+    }
+
+    // const totalNoticias = props.noticias.length;
+
+    // const paginas = (numeroPagina) => setPaginaActual(numeroPagina);
 
     /*Noticias Principales */
     // const [paginaActualPrincipal] = useState(1);
@@ -49,7 +101,7 @@ const Inicio = (props) => {
                     <Row className='text-center'>
                         <h1 className='text-center'>Noticias Principales</h1>
                         {
-                            noticiasPrincipales.map((noticias) =>
+                            cantidadNoticiasPrincipal.map((noticias) =>
                                 <ItemNoticiasPrincipales key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticiasPrincipales>)
                         }
                     </Row>
@@ -57,7 +109,7 @@ const Inicio = (props) => {
                 <article>
                     <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
                     <div className='d-flex justify-content-center'>
-                    <Image src={publicidadLolla} className='mb-5 d-flex justify-content-center' fluid></Image>
+                        <Image src={publicidadLolla} className='mb-5 d-flex justify-content-center' fluid></Image>
                     </div>
                     <h1 className="text-center mb-5">Actualidad</h1>
                     <article className='my-5'>
@@ -69,7 +121,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                        <Button className='btn btn-primary fs-4'>Ver Mas</Button>
+                        <Link to="/contacto" className="btn btn-primary fs-4" onClick={handleActualidad}>Ver mas</Link>
                     </article>
                 </article>
                 <article>
@@ -85,7 +137,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                        <Button className='fs-4'>Ver Mas</Button>
+                        <Link to="/contacto" className="btn btn-primary fs-4" onClick={handleDeporte}>Ver mas</Link>
                     </article>
                 </article>
                 <article>
@@ -103,7 +155,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                        <Button className='fs-4'>Ver Mas</Button>
+                        <Link to="/contacto" className="btn btn-primary fs-4" onClick={handlePolitica}>Ver mas</Link>
                     </article>
                 </article>
             </Container>

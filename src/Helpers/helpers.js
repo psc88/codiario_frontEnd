@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 
-// Funcion para validar campos
 const validarCampoRequerido= (dato) =>{
   if(dato.trim().length > 0 && dato.trim().length < 100){
       return true
@@ -9,7 +8,8 @@ const validarCampoRequerido= (dato) =>{
 }
 
 const validarNombre = (dato) => {
-  if (dato.trim().length > 0 && dato.trim().length < 50) {
+  console.log(dato.trim().length)
+  if (dato.trim().length > 0 && dato.trim().length <= 50) {
     return true;
   } else {
     return false;
@@ -17,7 +17,8 @@ const validarNombre = (dato) => {
 };
 
 const validarComentario = (dato) => {
-  if (dato.trim().length > 0) {
+  console.log(dato.trim().length)
+  if (dato.trim().length > 0 && dato.trim().length <= 1000) {
     return true;
   } else {
     return false;
@@ -25,8 +26,12 @@ const validarComentario = (dato) => {
 };
 
 const validarNumero = (dato) => {
-  if (dato > 0 && dato <= 20) return true;
-  else return false;
+  console.log(dato.trim().length)
+  if (dato.trim().length > 0 && dato.trim().length <= 20){
+    return true;
+  }else{
+    return false;
+  } 
 };
 
 const acierto = () => {
@@ -44,20 +49,15 @@ const error = () => {
 
 const validarTituloNoticia = (dato) => {
   if (dato.trim().length > 0 && dato.trim().length <= 150) {
-
     return true;
   } else {
-
     return false;
   }
 };
 
 const validarURL = (url) => {
-
-  let expReg = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
-
+  let expReg = /^https?:\/\/[\w\-.]+(\.[\w\-.]+)+[/#?]?.*$/;
   if (expReg.test(url.trim())) {
-
     return true;
   } else {
     return false;
@@ -65,26 +65,20 @@ const validarURL = (url) => {
 }
 
  function validarEmail (dato){
-  // expresion regular
-  let Email = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+  let Email = /[\w-\-.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
   if(Email.test(dato)){
     return true;
   } else {
-    
     return false;
   }
 }; 
 
 function validarContraseña(dato){
-    // expresion regular
   let contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   // Entre 8 y 16 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales
- 
   if(dato.trim() !== '' && contraseña.test(dato.trim())){
-   
     return true;
   } else {
-   
     return false;
   }
 };

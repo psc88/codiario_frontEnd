@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Logo from "../img/Logo.png";
+import logo from "../img/logo.png";
 import E404 from "../img/E404.png";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const error404 = () => {
           sm={12}
           className="text-center my-3"
         >
-          <img src={Logo} alt="logo CoDiario"/>
+          <img src={logo} alt="logo CoDiario"/>
         </Col>
         <Col
           lg={12}

@@ -6,10 +6,10 @@ import {
   validarNombre,
   validarNumero,
   validarComentario,
-} from "../Helpers/helpers";
+} from "../Helpers/helpers.js";
 
 import emailjs from "emailjs-com";
-import{ init } from 'emailjs-com';
+import { init } from 'emailjs-com';
 init("user_OVQcZD71YLsJOeqIJhZKK");
 
 const Contacto = () => {
@@ -33,7 +33,6 @@ const Contacto = () => {
         message: comentarios,
         mail: mail,
       };
-
       emailjs
         .send(
           "service_26rlmp1",
