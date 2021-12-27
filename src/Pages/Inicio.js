@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
-import { Image, Container, Row, Button } from 'react-bootstrap';
+import { Image, Container, Row } from 'react-bootstrap';
 import DetalleCovid from '../Components/DetalleCovid'
 import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif'
 import publicidadNaranjax from '../img/Publicidad/publicidadNaranjax.gif'
@@ -15,7 +15,7 @@ const Inicio = (props) => {
     const [ultimaPagina] = useState(3);
     const [paginaActualPrincipal] = useState(1);
     const [ultimaPaginaPrincipal] = useState(4);
-    
+
     /*FILTROS DE NOTICIAS POR CATEGORIA */
     const noticiasPrincipales = props.noticias.filter(noticias => noticias.categoria === 'Principales');
     const noticiasActualidad = props.noticias.filter(noticias => noticias.categoria === 'Actualidad');
@@ -82,7 +82,6 @@ const Inicio = (props) => {
         handleNoticiaFiltrada(noticiasTecnologia, tituloTecnologia);
     }
 
-
     // const totalNoticias = props.noticias.length;
 
     // const paginas = (numeroPagina) => setPaginaActual(numeroPagina);
@@ -110,7 +109,7 @@ const Inicio = (props) => {
                 <article>
                     <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
                     <div className='d-flex justify-content-center'>
-                    <Image src={publicidadLolla} className='mb-5 d-flex justify-content-center' fluid></Image>
+                        <Image src={publicidadLolla} className='mb-5 d-flex justify-content-center' fluid></Image>
                     </div>
                     <h1 className="text-center mb-5">Actualidad</h1>
                     <article className='my-5'>
@@ -122,7 +121,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                    <Link to="/contacto" className="btn btn-primary fs-4" onClick={handleActualidad}>Ver mas</Link>
+                        <Link to="/contacto" className="btn btn-primary fs-4" onClick={handleActualidad}>Ver mas</Link>
                     </article>
                 </article>
                 <article>
@@ -138,7 +137,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                    <Link to="/contacto" className="btn btn-primary fs-4" onClick={handleDeporte}>Ver mas</Link>
+                        <Link to="/contacto" className="btn btn-primary fs-4" onClick={handleDeporte}>Ver mas</Link>
                     </article>
                 </article>
                 <article>
@@ -156,7 +155,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                    <Link to="/contacto" className="btn btn-primary fs-4" onClick={handlePolitica}>Ver mas</Link>
+                        <Link to="/contacto" className="btn btn-primary fs-4" onClick={handlePolitica}>Ver mas</Link>
                     </article>
                 </article>
             </Container>
