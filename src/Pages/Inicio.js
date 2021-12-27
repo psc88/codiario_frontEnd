@@ -7,6 +7,7 @@ import publicidadNaranjax from '../img/Publicidad/publicidadNaranjax.gif'
 import Publicidad from '../Components/Publicidad';
 import ItemNoticiasPrincipales from '../Components/ItemNoticiasPrincipales';
 import ItemNoticias from '../Components/ItemNoticias';
+import { Link } from 'react-router-dom';
 
 
 const Inicio = (props) => {
@@ -68,7 +69,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                        <Button className='fs-4'>Ver Mas</Button>
+                        <Button className='btn btn-primary fs-4'>Ver Mas</Button>
                     </article>
                 </article>
                 <article>

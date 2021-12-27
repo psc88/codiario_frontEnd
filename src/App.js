@@ -14,6 +14,7 @@ import AgregarNoticia from './AdminNoticias/AgregarNoticia';
 import EditarNoticia from './AdminNoticias/EditarNoticia';
 import Error404 from './Pages/Error404'
 import Detalle from './Pages/Detalle';
+import Categoria from './Pages/Categoria';
 
 function App() {
   const [noticias, setNoticias] = useState([]);
@@ -40,6 +41,7 @@ console.log(URL)
       <NavbarAdmin></NavbarAdmin>
       <Routes>
         <Route exact path='/' element={<Inicio consultarAPI={consultarAPI} noticias={noticias}></Inicio>}></Route>
+        <Route exact path='/categorias' element={<Categoria consultarAPI={consultarAPI} noticias={noticias}></Categoria>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
         <Route exact path='/contacto' element={<Contacto></Contacto>}></Route>
         <Route exact path='/admin' element={<Admin noticias={noticias} consultarAPI={consultarAPI}></Admin>}></Route>
