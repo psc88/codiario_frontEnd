@@ -10,7 +10,7 @@ import ItemNoticias from '../Components/ItemNoticias';
 
 
 const Inicio = (props) => {
-    const [paginaActual, setPaginaActual] = useState(1);
+    const [paginaActual] = useState(1);
     const [ultimaPagina] = useState(3);
     console.log(props.noticias)
     
@@ -20,7 +20,11 @@ const Inicio = (props) => {
     const noticiasActualidad = props.noticias.filter(noticias => noticias.categoria === 'Actualidad');
     const noticiasPolitica = props.noticias.filter(noticias => noticias.categoria === 'Politica');
     const noticiasDeporte = props.noticias.filter(noticias => noticias.categoria === 'Deporte');
-    console.log(noticiasPrincipales)
+    console.log(noticiasPrincipales.categoria)
+
+    /*titulos de las categorias*/
+    const tituloActualidad = noticiasActualidad.categoria
+
     const indiceUltimaPublicacion = paginaActual * ultimaPagina
     const indicePrimeraPublicacion = indiceUltimaPublicacion - ultimaPagina
 
@@ -29,9 +33,9 @@ const Inicio = (props) => {
     const cantidadNoticiasPolitica = noticiasPolitica.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
     const cantidadNoticiasDeporte = noticiasDeporte.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
 
-    const totalNoticias = props.noticias.length;
+    // const totalNoticias = props.noticias.length;
 
-    const paginas = (numeroPagina) => setPaginaActual(numeroPagina);
+    // const paginas = (numeroPagina) => setPaginaActual(numeroPagina);
 
     /*Noticias Principales */
     // const [paginaActualPrincipal] = useState(1);
@@ -68,7 +72,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                        <Button className='fs-4'>Ver Mas</Button>
+                        <Button className='fs-4' titulo={props.tituloActualidad}>Ver Mas</Button>
                     </article>
                 </article>
                 <article>
