@@ -1,74 +1,116 @@
 {
   "noticias": [
     {
-      "tituloNoticia": "Alerta roja por una cepa nueva",
-      "descripcionNoticia": "Se ha detectado una nueva sepa de covid-19 proveniente de Sudafrica",
-      "urlNoticia": "https://image.shutterstock.com/image-photo/medicine-doctor-robotics-research-analysis-600w-1673968429.jpg",
-      "categoria": "salud",
+      "titulo": "Alerta roja por una cepa nueva",
+      "descripcion": "Se ha detectado una nueva sepa de covid-19 proveniente de Sudafrica",
+      "linkImagen": "https://image.shutterstock.com/image-photo/medicine-doctor-robotics-research-analysis-600w-1673968429.jpg",
+      "categoria": "Salud",
       "id": 5
     },
     {
-      "tituloNoticia": "Otra muerte mas",
-      "descripcionNoticia": "La inseguridad se cobro otra victima",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "deportes",
+      "titulo": "Otra muerte mas",
+      "descripcion": "La inseguridad se cobro otra victima",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Deporte",
       "id": 6
     },
     {
-      "tituloNoticia": "hola como estas?",
-      "descripcionNoticia": "perfecto",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "economia",
+      "titulo": "hola como estas?",
+      "descripcion": "perfecto",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Economia",
       "id": 8
     },
     {
-      "tituloNoticia": "buenos dias",
-      "descripcionNoticia": "holaaaaaaaaaaa",
-      "urlNoticia": "https://image.shutterstock.com/image-photo/businessman-on-blurred-background-holograms-600w-760421251.jpg",
-      "categoria": "deportes",
+      "titulo": "buenos dias",
+      "descripcion": "holaaaaaaaaaaa",
+      "linkImagen": "https://image.shutterstock.com/image-photo/businessman-on-blurred-background-holograms-600w-760421251.jpg",
+      "categoria": "Deporte",
       "id": 9
     },
     {
-      "tituloNoticia": "codiario",
-      "descripcionNoticia": "codiario",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "economia",
+      "titulo": "codiario",
+      "descripcion": "codiario",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Economia",
       "id": 10
     },
     {
-      "tituloNoticia": "hola hola",
-      "descripcionNoticia": "como va?",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "economia",
+      "titulo": "hola hola",
+      "descripcion": "como va?",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Economia",
       "id": 11
     },
     {
-      "tituloNoticia": "noticia de ",
-      "descripcionNoticia": "noticia",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "fotografia",
+      "titulo": "noticia de ",
+      "descripcion": "noticia",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Fotografia",
       "id": 12
     },
     {
-      "tituloNoticia": "hola",
-      "descripcionNoticia": "hola",
-      "urlNoticia": "https://image.shutterstock.com/image-photo/medicine-doctor-robotics-research-analysis-600w-1673968429.jpg",
-      "categoria": "economia",
+      "titulo": "hola",
+      "descripcion": "hola",
+      "linkImagen": "https://image.shutterstock.com/image-photo/medicine-doctor-robotics-research-analysis-600w-1673968429.jpg",
+      "categoria": "Economia",
       "id": 13
     },
     {
-      "tituloNoticia": "Hola de nuevo",
-      "descripcionNoticia": "hellow",
-      "urlNoticia": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "actualidad",
+      "titulo": "Hola de nuevo",
+      "descripcion": "hellow",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Actualidad",
       "id": 14
     },
     {
-      "tituloNoticia": "el kks",
-      "descripcionNoticia": "el kks",
-      "urlNoticia": "     https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "politica",
+      "titulo": "el kks",
+      "descripcion": "el kks",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Politica",
       "id": 15
+    },
+    {
+      "titulo": "el kks",
+      "descripcion": "el kks",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Principales",
+      "id": 16
+    },
+    {
+      "titulo": "el kks",
+      "descripcion": "el kks",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Principales",
+      "id": 17
+    },
+    {
+      "titulo": "el kks",
+      "descripcion": "el kks",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Principales",
+      "id": 18
+    },
+    {
+      "titulo": "el kks",
+      "descripcion": "el kks",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Principales",
+      "id": 19
+    },
+    {
+      "titulo": "Hola de nuevo",
+      "descripcion": "hellow",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Actualidad",
+      "id": 20
+    },
+    {
+      "titulo": "buenos dias",
+      "descripcion": "holaaaaaaaaaaa",
+      "linkImagen": "https://image.shutterstock.com/image-photo/businessman-on-blurred-background-holograms-600w-760421251.jpg",
+      "categoria": "Deporte",
+      "id": 21
     }
   ]
 }
