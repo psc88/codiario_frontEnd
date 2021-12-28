@@ -4,7 +4,7 @@ import {
   error,
   acierto,
   validarNombre,
-  validarNumero,
+  validarNumeroTelefono,
   validarComentario,
 } from "../Helpers/helpers.js";
 
@@ -23,7 +23,7 @@ const Contacto = () => {
     //validar todos los input
     if (
       validarNombre(nombreContacto) &&
-      validarNumero(telefonoContacto) &&
+      validarNumeroTelefono(telefonoContacto) &&
       validarComentario(comentarios)
     ) {
       acierto();

@@ -113,11 +113,18 @@
       "id": 22
     },
     {
-      "titulo": "Bon dia ",
+      "titulo": "Noticia de hoy",
       "descripcion": "Bon dia gente de Argentina",
       "linkImagen": "https://images.pexels.com/photos/4610334/pexels-photo-4610334.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "categoria": "Fotografia",
+      "categoria": "Politica",
       "id": 23
+    },
+    {
+      "titulo": "noticia de autos",
+      "descripcion": "comentario de la ultima descripción",
+      "linkImagen": "https://lh3.googleusercontent.com/fife/AAWUweW1y5qan2l6KxvrnaJc8wXK6nNP-i4JOBRySflS-0BxKgsWgB6LumORp0jOniPZp0bcfxNd8erShyuIXfOcZeZZZcdrh8QdTrDeTpe67o07uOVSR4HqZZS-e26HExpxRW10kJ1bXatUUvc6wdCIIiltuCq7ORzlRatJ5ix3IsIA9VYqTBUG5xfRDn271Har0QqtcPHtAe9ndLNAmO67xGZRYeC4gtgGGt3u1a33tQiIcP8mh1j6yp9PHr1euintglb3GIeEtaVB9Je3N90tBqlCMF5FkIeLB4aU8t7sbU4UwCPKs1fF8ouhueCtmMuERrmfQKPRPu1IonGM8nityeINa8J6Ow-a4pcCWjHSvzQulomFe_7IgNcEz8Z0nJ26-JfK3ybt5WoJ9IqmdNJRjukFqqitMK81AfFVAvrOepvCjnm1lK_FWGqbTRLEDF6jh1Cm_29oOzgVcB1PP5av27YOpHsSdUG0Yi-o37D0CtI4pXu7KB1oDngUI7Sq7WuCLSA4TE6h05FfiJMEcpmZMx3Vu2-1Zwhm31E6gDNqNcCHRjQddZgxlRT2FN2wiRpBK1j09py5NsEhDAJsej_0YfR3NvLA-5qKMpKu52uQFsI3WwSzBsh82pCxiuVAxj3OqMA_s0JdAarUlO-8kV35AlI1He1Z0gLNfpd_nk-PGuDZWeP3N9UOQ8S2h7SQBVEZRWwYsjvUrwu804h7QvysPaDlIizgCtOPmA=w1878-h938-ft",
+      "categoria": "Tecnologia",
+      "id": 24
     }
   ],
   "comentarios": [
@@ -125,6 +132,11 @@
       "nombre": "pablo",
       "comentario": "esto es otro comentario",
       "id": 3
+    },
+    {
+      "nombre": "Sebastian",
+      "comentario": "esto es un comentario",
+      "id": 4
     }
   ],
   "usuarios": [
@@ -175,6 +187,13 @@
       "email": "enrico@codiario.com",
       "contraseña": "123456Enrico",
       "id": 6
+    },
+    {
+      "titulo": "Nuevas Nuevas",
+      "descripcion": "Buenas tardes, como estan?",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Principales",
+      "id": 16
     }
   ]
 }

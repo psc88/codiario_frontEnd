@@ -36,6 +36,15 @@ const validarNumero = (dato) => {
   }
 };
 
+const validarNumeroTelefono = (dato) => {
+  let codigoUnico = /^[1-9]{10}$/;
+  if (codigoUnico.test(dato.trim())) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 const acierto = () => {
   return Swal.fire("Bien Hecho !", "Enviaste tu consulta <hr> Te estaremos respondiendo a la brevedad", "success");
 };
@@ -94,4 +103,4 @@ function validarContraseña(dato) {
   }
 };
 
-export { error, acierto, validarNombre, validarNumero, validarTituloNoticia, validarDescripcion, validarURL, validarComentario, validarCampoRequerido, validarEmail, validarContraseña }
+export { error, acierto, validarNombre, validarNumero, validarTituloNoticia, validarDescripcion, validarURL, validarComentario, validarCampoRequerido, validarEmail, validarContraseña, validarNumeroTelefono }
