@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Row, Col, Image } from 'react-bootstrap';
-import Comentador from '../Components/Comentador'
+import Comentador from '../Components/Comentador';
 import CajaComentarios from '../Components/CajaComentarios';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'
-import Publicidad from '../Components/Publicidad'
-import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif'
+import { useParams } from 'react-router-dom';
+import Publicidad from '../Components/Publicidad';
+import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif';
 
 const Detalle = (props) => {
   const { id } = useParams();
