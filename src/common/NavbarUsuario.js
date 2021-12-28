@@ -15,7 +15,7 @@ const NavbarUsuario = () =>{
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
              <Container>
              <Navbar.Brand>
-               <Link to="/">
+               <Link to="/usuario">
                  <img
                    src={logo}
                    width="120"
@@ -28,7 +28,7 @@ const NavbarUsuario = () =>{
              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
              <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="me-auto">
-                 <Link to="/" className="nav-link">Inicio</Link>
+                 <Link to="/usuario" className="nav-link">Inicio</Link>
                  <Link to="/actualidad" className="nav-link">Actualidad</Link>
                  <Link to="/especaculos" className="nav-link">Espectáculos</Link>
                  <Link to="/tecnologia" className="nav-link">Tecnología</Link>

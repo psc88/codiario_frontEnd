@@ -16,3 +16,10 @@
   font-size: 30px;
   font-family: "Playfair Display", serif;
 }
+
+#recorteTexto{
+  width: 230px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

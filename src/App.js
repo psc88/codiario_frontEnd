@@ -20,6 +20,7 @@ import Categoria from './Pages/Categoria';
 import Login from './Pages/Login';
 import LoginRegistro from './Pages/LoginRegistro';
 import NavbarUsuario from './common/NavbarUsuario';
+import ListaUsuarios from './Pages/ListarUsuarios';
 
 function App() {
   const [noticias, setNoticias] = useState([]);
@@ -64,7 +65,7 @@ function App() {
   return (
     <>
     <Router>
-      <NavbarInicio></NavbarInicio>
+      <NavbarUsuario></NavbarUsuario>
       <Routes>
         <Route exact path='/' element={<Inicio consultarAPI={consultarAPI} noticias={noticias} handleNoticiaFiltrada={handleNoticiaFiltrada}></Inicio>}></Route>
         <Route exact path='/usuario' element={<InicioUsuario consultarAPI={consultarAPI} noticias={noticias} handleNoticiaFiltrada={handleNoticiaFiltrada}></InicioUsuario>}></Route>
@@ -73,6 +74,7 @@ function App() {
         <Route exact path='/contacto' element={<Contacto></Contacto>}></Route>
         <Route exact path='/login' element={<Login usuarios={usuarios}></Login>}></Route>
         <Route exact path='/loginRegistro' element={<LoginRegistro></LoginRegistro>}></Route>
+        <Route exact path='/listaUsuario' element={<ListaUsuarios usuarios={usuarios}></ListaUsuarios>}></Route>
         <Route exact path='/admin' element={<Admin noticias={noticias} consultarAPI={consultarAPI}></Admin>}></Route>
         <Route exact path='/admin/nuevaNoticia' element={<AgregarNoticia consultarAPI={consultarAPI}></AgregarNoticia>}></Route>
         <Route exact path='/admin/editarNoticia/:id' element={<EditarNoticia consultarAPI={consultarAPI}></EditarNoticia>}></Route>

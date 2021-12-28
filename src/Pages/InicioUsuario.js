@@ -46,6 +46,11 @@ const Inicio = (props) => {
     const cantidadNoticiasActualidad = noticiasActualidad.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
     const cantidadNoticiasPolitica = noticiasPolitica.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
     const cantidadNoticiasDeporte = noticiasDeporte.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
+    const cantidadNoticiasEspectaculos = noticiasEspectaculos.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
+    const cantidadNoticiasEconomia = noticiasEconomia.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
+    const cantidadNoticiasSalud = noticiasSalud.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
+    const cantidadNoticiasFotografia = noticiasFotografia.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
+    const cantidadNoticiasTecnologia = noticiasTecnologia.slice(indicePrimeraPublicacion, indiceUltimaPublicacion)
 
 
     /*Funciones de filtrado de noticias para App.js */
@@ -167,7 +172,7 @@ const Inicio = (props) => {
                     <article className='my-5'>
                         <Row className='d-flex justify-content-center'>
                             {
-                                cantidadNoticiasPolitica.map((noticias) =>
+                                cantidadNoticiasEspectaculos.map((noticias) =>
                                     <ItemNoticiasUsuario key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticiasUsuario>)
                             }
                         </Row>
@@ -185,7 +190,7 @@ const Inicio = (props) => {
                     <article className='my-5'>
                         <Row className='d-flex justify-content-center'>
                             {
-                                cantidadNoticiasPolitica.map((noticias) =>
+                                cantidadNoticiasEconomia.map((noticias) =>
                                     <ItemNoticiasUsuario key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticiasUsuario>)
                             }
                         </Row>
@@ -203,7 +208,7 @@ const Inicio = (props) => {
                     <article className='my-5'>
                         <Row className='d-flex justify-content-center'>
                             {
-                                cantidadNoticiasPolitica.map((noticias) =>
+                                cantidadNoticiasSalud.map((noticias) =>
                                     <ItemNoticiasUsuario key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticiasUsuario>)
                             }
                         </Row>
@@ -221,7 +226,7 @@ const Inicio = (props) => {
                     <article className='my-5'>
                         <Row className='d-flex justify-content-center'>
                             {
-                                cantidadNoticiasPolitica.map((noticias) =>
+                                cantidadNoticiasTecnologia.map((noticias) =>
                                     <ItemNoticiasUsuario key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticiasUsuario>)
                             }
                         </Row>
@@ -239,7 +244,7 @@ const Inicio = (props) => {
                     <article className='my-5'>
                         <Row className='d-flex justify-content-center'>
                             {
-                                cantidadNoticiasPolitica.map((noticias) =>
+                                cantidadNoticiasFotografia.map((noticias) =>
                                     <ItemNoticiasUsuario key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticiasUsuario>)
                             }
                         </Row>

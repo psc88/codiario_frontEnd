@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import ItemCategoria from "../Components/ItemCategoria";
+import ItemCategoria from "../PaginaUsuarios/ItemCategoria";
 
 const Categoria = (props) => {
 
