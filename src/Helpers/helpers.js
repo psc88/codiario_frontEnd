@@ -73,7 +73,7 @@ const validarURL = (url) => {
 }
 
  function validarEmail (dato){
-  let Email = /[\w-\-.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+  let Email = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
   if(Email.test(dato)){
     return true;
   } else {
@@ -83,7 +83,7 @@ const validarURL = (url) => {
 
 function validarContraseña(dato){
   let contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
-  // Entre 8 y 16 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales
+  // Entre 8 y 16 caracteres, por lo menos un digito, una minuscula, una mayusula, y no puede tener simbolos
   if(dato.trim() !== '' && contraseña.test(dato.trim())){
     return true;
   } else {

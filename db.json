@@ -126,5 +126,39 @@
       "comentario": "esto es otro comentario",
       "id": 3
     }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreYApellido": "Carlos",
+      "edad": "52",
+      "ciudad": "salta",
+      "email": "carlos@gmail.com",
+      "contraseña": "12345678Carlos"
+    },
+    {
+      "id": 2,
+      "nombreYApellido": "Juan",
+      "edad": "52",
+      "ciudad": "salta",
+      "email": "juan@gmail.com",
+      "contraseña": "12345678Juan"
+    },
+    {
+      "id": 3,
+      "nombreYApellido": "Pepe",
+      "edad": "52",
+      "ciudad": "salta",
+      "email": "pepe@gmail.com",
+      "contraseña": "12345678Pepe"
+    },
+    {
+      "id": 4,
+      "nombreYApellido": "Pedro",
+      "edad": "52",
+      "ciudad": "salta",
+      "email": "pedro@gmail.com",
+      "contraseña": "12345678Pedro"
+    }
   ]
 }

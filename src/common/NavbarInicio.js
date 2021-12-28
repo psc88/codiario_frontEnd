@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import logo from "../../img/Logo.png"
+import logo from "../img/logo.png"
 
 
 const NavbarInicio= () =>{
@@ -27,16 +27,6 @@ const NavbarInicio= () =>{
              <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="me-auto">
                  <Link to="/" className="nav-link">Inicio</Link>
-                 <Link to="/actualidad" className="nav-link">Actualidad</Link>
-                 <Link to="/especaculos" className="nav-link">Espectáculos</Link>
-                 <Link to="/tecnologia" className="nav-link">Tecnología</Link>
-                 <Link to="/deportes" className="nav-link">Deportes</Link>
-                 <NavDropdown title="+ Secciones" id="collasible-nav-dropdown">
-                   <NavDropdown.Item href="*/3.1">Política</NavDropdown.Item>
-                   <NavDropdown.Item href="*/3.2">Economía</NavDropdown.Item>
-                   <NavDropdown.Item href="*/3.3">Salud</NavDropdown.Item>
-                   <NavDropdown.Item href="*/3.4">Fotografías</NavDropdown.Item>
-                 </NavDropdown>
                 </Nav>
                   <Link to="/nosotros" className="nav-link">Acerca de Nosotros</Link>
                   <Link to="/contacto">
