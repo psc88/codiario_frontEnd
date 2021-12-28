@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import logo from "../img/Logo.png"
-
+import { NavDropdown } from "react-bootstrap";
+import logo from "../../img/Logo.png"
+import { Button } from "react-bootstrap";
 
 const NavbarAdmin = () =>{
     return(
         <>
-          <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
              <Container>
              <Navbar.Brand >
                <Link to="/">

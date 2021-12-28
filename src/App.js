@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Contacto from './Pages/Contacto';
-import Footer from './Components/common/Footer';
+import Footer from './common/Footer';
 import Admin from './Pages/Admin';
 import AgregarNoticia from './AdminNoticias/AgregarNoticia';
 import EditarNoticia from './AdminNoticias/EditarNoticia';
