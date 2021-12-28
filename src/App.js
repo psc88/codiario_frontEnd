@@ -38,6 +38,7 @@ function App() {
       const datos = await respuesta.json();
 
       setUsuarios(datos);
+      console.log(usuario);
      
 
       }catch (error){
@@ -62,7 +63,7 @@ function App() {
         <Route exact path='/admin/editarNoticia/:id' element={<EditarNoticia consultarAPI={consultarAPI}></EditarNoticia>}></Route>*/}
         <Route exact path='*' element={<Error404/>}></Route>
         {/*<Route exacth path='/nota/:id' element={<Detalle noticias={noticias}/>}></Route>*/}
-        <Route exact path='/login' element={<Login></Login>}></Route>
+        <Route exact path='/login' element={<Login usuarios={usuarios}></Login>}></Route>
         <Route exact path='/registrarse' element={<LoginRegistro consultarAPI={ consultarAPI}></LoginRegistro>}></Route>
         <Route exact path='/usuarios' element={<ListaUsuarios usuarios={usuarios}></ListaUsuarios>}></Route>
         <Route exact path ='/navbarInicio' element={<NavbarInicio></NavbarInicio>}></Route>
