@@ -159,6 +159,22 @@
       "ciudad": "salta",
       "email": "pedro@gmail.com",
       "contraseña": "12345678Pedro"
+    },
+    {
+      "nombreYApellido": "Pablo Castillo",
+      "edad": "45",
+      "ciudad": "Tucuman",
+      "email": "pablo@gmail.com",
+      "contraseña": "123456Pablo",
+      "id": 5
+    },
+    {
+      "nombreYApellido": "Enrico",
+      "edad": "24",
+      "ciudad": "Tucuman",
+      "email": "enrico@codiario.com",
+      "contraseña": "123456Enrico",
+      "id": 6
     }
   ]
 }

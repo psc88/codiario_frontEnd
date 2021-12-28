@@ -46,14 +46,14 @@ const Login = (props) => {
             <Form className="my-5 center col-5" onSubmit={handleSubmit}>
                <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Correo electrónico</Form.Label>
-                  <Form.Control type="email" placeholder="Ingrese su correo electrónico" onChange={(e) => setEmail(e.target.value)} />
+                  <Form.Control required type="email" placeholder="Ingrese su correo electrónico" onChange={(e) => setEmail(e.target.value)} />
                   <Form.Text className="text-muted">
                      Nunca compartiremos su correo electrónico con nadie más.
                   </Form.Text>
                </Form.Group>
                <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Contraseña</Form.Label>
-                  <Form.Control type="password" placeholder="contraseña" onChange={(e) => setContraseña(e.target.value)} />
+                  <Form.Control required type="password" placeholder="contraseña" onChange={(e) => setContraseña(e.target.value)}/>
                   <Form.Text className="text-muted">
                      Debe contener entre 8 y 16 digitos, una mayuscula, una minuscula y sin simbolos.
                   </Form.Text>
@@ -65,7 +65,7 @@ const Login = (props) => {
                </div>
                <article className="text-center">
                   <p className="fs-4">Si aún no eres usuario debes registrarte</p>
-                  <Link to="/registrarse" className="btn btn-primary">Registrarse</Link>
+                  <Link to="/loginRegistro" className="btn btn-primary">Registrarse</Link>
                </article>
             </Form>
          </div>

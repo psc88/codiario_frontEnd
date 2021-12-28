@@ -1,14 +1,16 @@
+import { FormControl } from "react-bootstrap";
 import Swal from "sweetalert2";
 
-const validarCampoRequerido= (dato) =>{
-  if(dato.trim().length > 0 && dato.trim().length < 100){
-      return true
-  }else{
-    return false}
+const validarCampoRequerido = (dato) => {
+  if (dato.trim().length > 0 && dato.trim().length < 100) {
+    return true
+  } else {
+    return false
+  }
 }
 
 const validarNombre = (dato) => {
-  
+
   if (dato.trim().length > 0 && dato.trim().length <= 50) {
     return true;
   } else {
@@ -26,12 +28,12 @@ const validarComentario = (dato) => {
 };
 
 const validarNumero = (dato) => {
-  console.log(dato.trim().length)
-  if (dato.trim().length > 0 && dato.trim().length <= 20){
+  let codigoUnico = /^[1-9]{2}$/;
+  if (codigoUnico.test(dato.trim())) {
     return true;
-  }else{
+  } else {
     return false;
-  } 
+  }
 };
 
 const acierto = () => {
@@ -55,10 +57,10 @@ const validarTituloNoticia = (dato) => {
   }
 };
 
-const validarDescripcion = (dato)=>{
-  if(dato.trim().length > 20 && dato.trim().length <= 3000){
+const validarDescripcion = (dato) => {
+  if (dato.trim().length > 20 && dato.trim().length <= 3000) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -72,19 +74,20 @@ const validarURL = (url) => {
   }
 }
 
- function validarEmail (dato){
+function validarEmail(dato) {
+  // minimalista basico 
   let Email = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-  if(Email.test(dato)){
+  if (Email.test(dato)) {
     return true;
   } else {
     return false;
   }
-}; 
+};
 
-function validarContraseña(dato){
+function validarContraseña(dato) {
   let contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   // Entre 8 y 16 caracteres, por lo menos un digito, una minuscula, una mayusula, y no puede tener simbolos
-  if(dato.trim() !== '' && contraseña.test(dato.trim())){
+  if (dato.trim() !== '' && contraseña.test(dato.trim())) {
     return true;
   } else {
     return false;
