@@ -19,14 +19,14 @@ const CardNoticias = (props) => {
             if (result.isConfirmed) {
 
                 try{
-                    const URL = process.env.REACT_APP_API_URL+'/'+props.noticia.id;
+                    const URL = process.env.REACT_APP_API_URL+'/noticias/'+props.noticia.id;
                     const respuesta = await fetch(URL, {
                         method: "DELETE",
                         headers: {
                             "Content-Type": "application/json"
                         }
                     });
-                    
+                    console.log(respuesta)
                     if(respuesta.status === 200){
                         
                         Swal.fire(
@@ -51,12 +51,12 @@ const CardNoticias = (props) => {
     return (
         <Col lg={3} md={4} sm={12} className='my-2'>
         <Card>
-            <Card.Img variant="top" src= {props.noticia.urlNoticia} />
+            <Card.Img variant="top" src={props.noticia.linkImagen}/>
             <Card.Body>
-                <Card.Title>{props.noticia.tituloNoticia}</Card.Title>
+                <Card.Title>{props.noticia.titulo}</Card.Title>
                 <Card.Text>Categoria: {props.noticia.categoria}</Card.Text>
                 <Card.Text>
-                    {props.noticia.descripcionNoticia}
+                    {props.noticia.descripcion}
                 </Card.Text>
                 <Link to={`/admin/editarNoticia/${props.noticia.id}`} className='btn btn-warning me-2'>Editar</Link>
                 <Button variant="danger" onClick={()=> borrarNoticia()}>Borrar</Button>

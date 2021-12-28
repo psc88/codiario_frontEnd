@@ -8,7 +8,7 @@ const validarCampoRequerido= (dato) =>{
 }
 
 const validarNombre = (dato) => {
-  console.log(dato.trim().length)
+  
   if (dato.trim().length > 0 && dato.trim().length <= 50) {
     return true;
   } else {
@@ -48,12 +48,20 @@ const error = () => {
 };
 
 const validarTituloNoticia = (dato) => {
-  if (dato.trim().length > 0 && dato.trim().length <= 150) {
+  if (dato.trim().length > 5 && dato.trim().length <= 150) {
     return true;
   } else {
     return false;
   }
 };
+
+const validarDescripcion = (dato)=>{
+  if(dato.trim().length > 20 && dato.trim().length <= 3000){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 const validarURL = (url) => {
   let expReg = /^https?:\/\/[\w\-.]+(\.[\w\-.]+)+[/#?]?.*$/;
@@ -83,4 +91,4 @@ function validarContraseña(dato){
   }
 };
 
-export { error, acierto, validarNombre, validarNumero, validarTituloNoticia, validarURL, validarComentario, validarCampoRequerido, validarEmail, validarContraseña }
+export { error, acierto, validarNombre, validarNumero, validarTituloNoticia, validarDescripcion, validarURL, validarComentario, validarCampoRequerido, validarEmail, validarContraseña }

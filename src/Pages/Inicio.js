@@ -21,7 +21,7 @@ const Inicio = (props) => {
     const noticiasActualidad = props.noticias.filter(noticias => noticias.categoria === 'Actualidad');
     const noticiasPolitica = props.noticias.filter(noticias => noticias.categoria === 'Politica');
     const noticiasDeporte = props.noticias.filter(noticias => noticias.categoria === 'Deporte');
-    const noticiasEspectaculos = props.noticias.filter(noticias => noticias.categoria === 'Espectaculos');
+    const noticiasEspectaculos = props.noticias.filter(noticias => noticias.categoria === 'Espectaculo');
     const noticiasEconomia = props.noticias.filter(noticias => noticias.categoria === 'Economia');
     const noticiasSalud = props.noticias.filter(noticias => noticias.categoria === 'Salud');
     const noticiasFotografia = props.noticias.filter(noticias => noticias.categoria === 'Fotografia');
@@ -121,7 +121,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                        <Link to="/contacto" className="btn btn-primary fs-4" onClick={handleActualidad}>Ver mas</Link>
+                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleActualidad}>Ver mas</Link>
                     </article>
                 </article>
                 <article>
@@ -137,7 +137,7 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                        <Link to="/contacto" className="btn btn-primary fs-4" onClick={handleDeporte}>Ver mas</Link>
+                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleDeporte}>Ver mas</Link>
                     </article>
                 </article>
                 <article>
@@ -155,7 +155,97 @@ const Inicio = (props) => {
                         </Row>
                     </article>
                     <article className='d-flex justify-content-center'>
-                        <Link to="/contacto" className="btn btn-primary fs-4" onClick={handlePolitica}>Ver mas</Link>
+                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handlePolitica}>Ver mas</Link>
+                    </article>
+                </article>
+                <article>
+                    <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
+                    <div className='text-center'>
+                        <Image src={publicidadNaranjax} className='mb-5' fluid></Image>
+                    </div>
+                    <h1 className="text-center mb-5">Espectaculos</h1>
+                    <article className='my-5'>
+                        <Row className='d-flex justify-content-center'>
+                            {
+                                cantidadNoticiasPolitica.map((noticias) =>
+                                    <ItemNoticias key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticias>)
+                            }
+                        </Row>
+                    </article>
+                    <article className='d-flex justify-content-center'>
+                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleEspectaculo}>Ver mas</Link>
+                    </article>
+                </article>
+                <article>
+                    <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
+                    <div className='text-center'>
+                        <Image src={publicidadNaranjax} className='mb-5' fluid></Image>
+                    </div>
+                    <h1 className="text-center mb-5">Economía</h1>
+                    <article className='my-5'>
+                        <Row className='d-flex justify-content-center'>
+                            {
+                                cantidadNoticiasPolitica.map((noticias) =>
+                                    <ItemNoticias key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticias>)
+                            }
+                        </Row>
+                    </article>
+                    <article className='d-flex justify-content-center'>
+                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleEconomia}>Ver mas</Link>
+                    </article>
+                </article>
+                <article>
+                    <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
+                    <div className='text-center'>
+                        <Image src={publicidadNaranjax} className='mb-5' fluid></Image>
+                    </div>
+                    <h1 className="text-center mb-5">Salud</h1>
+                    <article className='my-5'>
+                        <Row className='d-flex justify-content-center'>
+                            {
+                                cantidadNoticiasPolitica.map((noticias) =>
+                                    <ItemNoticias key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticias>)
+                            }
+                        </Row>
+                    </article>
+                    <article className='d-flex justify-content-center'>
+                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleSalud}>Ver mas</Link>
+                    </article>
+                </article>
+                <article>
+                    <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
+                    <div className='text-center'>
+                        <Image src={publicidadNaranjax} className='mb-5' fluid></Image>
+                    </div>
+                    <h1 className="text-center mb-5">Tecnología</h1>
+                    <article className='my-5'>
+                        <Row className='d-flex justify-content-center'>
+                            {
+                                cantidadNoticiasPolitica.map((noticias) =>
+                                    <ItemNoticias key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticias>)
+                            }
+                        </Row>
+                    </article>
+                    <article className='d-flex justify-content-center'>
+                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleTecnologia}>Ver mas</Link>
+                    </article>
+                </article>
+                <article>
+                    <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
+                    <div className='text-center'>
+                        <Image src={publicidadNaranjax} className='mb-5' fluid></Image>
+                    </div>
+                    <h1 className="text-center mb-5">Fotografía</h1>
+                    <article className='my-5'>
+                        <Row className='d-flex justify-content-center'>
+                            {
+                                cantidadNoticiasPolitica.map((noticias) =>
+                                    <ItemNoticias key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticias>)
+                            }
+                        </Row>
+                    </article>
+                    <article className='d-flex justify-content-center'>
+                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleFotografia}>Ver mas</Link>
                     </article>
                 </article>
             </Container>

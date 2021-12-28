@@ -56,7 +56,7 @@ const DetalleCovid = () => {
                                     </article>
                                     <hr />
                                     <article className='d-flex'>
-                                        <p>MUERTOS:</p>
+                                        <p>FALLECIDOS:</p>
                                         <p className='ms-3'>{covidMundialMuertos}</p>
                                     </article>
                                     <hr />
