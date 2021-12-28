@@ -8,10 +8,12 @@ import { validarEmail, validarContraseña } from "../Helpers/helpers";
 
 
 
+
       const Login = ()=>{
          const navegar = useNavigate();
          const Email= useState('');
          const Contraseña = useState('');
+         const usuario = ('');
          
          const handleSubmit = (e)=>{
             e.preventDefault();
@@ -20,11 +22,15 @@ import { validarEmail, validarContraseña } from "../Helpers/helpers";
              validarContraseña(Contraseña) )
                 
             {
-               return true;
-               navegar ('/inicio')
-            }else{
-               return false;
-               navegar('/admin')
+               if(
+                  usuario === "enrico@codiario.com" || "gabriel@codiario.com" || "pabloc@codiario.com" || 
+                  "pablod@codiario.com" || "marcelo@codiario.com" ){
+                  //props.consultarapi();
+                 navegar('/navbarAdmin')
+                return true;
+               }else{
+                navegar('/navbarUsuario')
+                return false;
             }
          }
 
@@ -59,8 +65,6 @@ import { validarEmail, validarContraseña } from "../Helpers/helpers";
       </Container>
       );
       };     
+   };
 
-    
-
-
-export default Login;
+    export default Login;

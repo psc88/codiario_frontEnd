@@ -59,7 +59,7 @@ function validarContraseña(dato){
   let Contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   // Entre 8 y 16 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales
  
-  if(dato.trim() != ''){
+  if(dato.trim() != '' && Contraseña.test(dato.trim())){
    
     return true;
   } else {
