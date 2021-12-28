@@ -13,7 +13,7 @@ import Contacto from './Pages/Contacto';
 import Footer from './common/Footer';
 import Admin from './Pages/Admin';
 import AgregarNoticia from './AdminNoticias/AgregarNoticia';
-import EditarNoticia from './AdminNoticias/EditarNoticia';
+// import EditarNoticia from './AdminNoticias/EditarNoticia';
 import Error404 from './Pages/Error404'
 // import Detalle from './Pages/Detalle';
 import Categoria from './Pages/Categoria';
@@ -77,7 +77,7 @@ function App() {
         <Route exact path='/listaUsuario' element={<ListaUsuarios usuarios={usuarios}></ListaUsuarios>}></Route>
         <Route exact path='/admin' element={<Admin noticias={noticias} consultarAPI={consultarAPI}></Admin>}></Route>
         <Route exact path='/admin/nuevaNoticia' element={<AgregarNoticia consultarAPI={consultarAPI}></AgregarNoticia>}></Route>
-        <Route exact path='/admin/editarNoticia/:id' element={<EditarNoticia consultarAPI={consultarAPI}></EditarNoticia>}></Route>
+        {/* <Route exact path='/admin/editarNoticia/:id' element={<EditarNoticia consultarAPI={consultarAPI}></EditarNoticia>}></Route> */}
         {/* <Route exacth path='/nota/:id' element={<Detalle noticias={noticias}/>}></Route> */}
         <Route exact path='*' element={<Error404 />}></Route>
       </Routes>
