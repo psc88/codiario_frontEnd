@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import Logo from '../img/Logo.png'
+import logo from '../img/logo.png'
 
 
 const NavbarAdmin = () =>{
@@ -15,7 +15,7 @@ const NavbarAdmin = () =>{
              <Navbar.Brand >
                <Link to="/">
                  <img
-                   src={Logo}
+                   src={logo}
                    width="120"
                    height="56"
                    className="d-inline-block align-top"
