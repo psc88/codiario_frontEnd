@@ -2,7 +2,7 @@
   "noticias": [
     {
       "titulo": "Alerta roja por una cepa nueva",
-      "descripcion": "Se ha detectado una nueva sepa de covid-19 proveniente de Sudafrica",
+      "descripcion": "Se ha detectado una nueva sepa de covid-19 proveniente de Sudafrica. Los científicos estimaron que la nueva variante Ómicron tiene alrededor de 50 mutaciones respecto a otras cepas del coronavirus. La mayoría están ubicadas en la proteína spike, que es la que usa el virus para adherirse a las células sanas y sobre la que actúan la mayoría de las vacunas.",
       "linkImagen": "https://image.shutterstock.com/image-photo/medicine-doctor-robotics-research-analysis-600w-1673968429.jpg",
       "categoria": "Salud",
       "id": 5
@@ -118,6 +118,13 @@
       "linkImagen": "https://images.pexels.com/photos/4610334/pexels-photo-4610334.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "categoria": "Fotografia",
       "id": 23
+    }
+  ],
+  "comentarios": [
+    {
+      "nombre": "pablo",
+      "comentario": "esto es otro comentario",
+      "id": 3
     }
   ]
 }

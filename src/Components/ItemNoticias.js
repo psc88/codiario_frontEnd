@@ -12,7 +12,6 @@ const ItemNoticias = (props) => {
                     <Card.Text>
                         {props.noticias.descripcion}
                     </Card.Text>
-                    
                     <Link to={`/nota/${props.noticias.id}`} className='btn btn-primary'>Leer mas</Link>
                 </Card.Body>
             </Card>
