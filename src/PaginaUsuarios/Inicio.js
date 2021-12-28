@@ -6,7 +6,7 @@ import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif'
 import publicidadNaranjax from '../img/Publicidad/publicidadNaranjax.gif'
 import Publicidad from '../Components/Publicidad';
 import ItemNoticiasPrincipales from '../Components/ItemNoticiasPrincipales';
-import ItemNoticias from '../Components/ItemNoticias';
+import ItemNoticias from '../Components/ItemNoticiasUsuario';
 import { Link } from 'react-router-dom';
 
 
@@ -120,9 +120,6 @@ const Inicio = (props) => {
                             }
                         </Row>
                     </article>
-                    <article className='d-flex justify-content-center'>
-                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleActualidad}>Ver mas</Link>
-                    </article>
                 </article>
                 <article>
                     <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
@@ -135,9 +132,6 @@ const Inicio = (props) => {
                                     <ItemNoticias key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticias>)
                             }
                         </Row>
-                    </article>
-                    <article className='d-flex justify-content-center'>
-                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleDeporte}>Ver mas</Link>
                     </article>
                 </article>
                 <article>
@@ -154,9 +148,6 @@ const Inicio = (props) => {
                             }
                         </Row>
                     </article>
-                    <article className='d-flex justify-content-center'>
-                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handlePolitica}>Ver mas</Link>
-                    </article>
                 </article>
                 <article>
                     <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
@@ -171,9 +162,6 @@ const Inicio = (props) => {
                                     <ItemNoticias key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticias>)
                             }
                         </Row>
-                    </article>
-                    <article className='d-flex justify-content-center'>
-                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleEspectaculo}>Ver mas</Link>
                     </article>
                 </article>
                 <article>
@@ -190,9 +178,6 @@ const Inicio = (props) => {
                             }
                         </Row>
                     </article>
-                    <article className='d-flex justify-content-center'>
-                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleEconomia}>Ver mas</Link>
-                    </article>
                 </article>
                 <article>
                     <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
@@ -207,9 +192,6 @@ const Inicio = (props) => {
                                     <ItemNoticias key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticias>)
                             }
                         </Row>
-                    </article>
-                    <article className='d-flex justify-content-center'>
-                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleSalud}>Ver mas</Link>
                     </article>
                 </article>
                 <article>
@@ -226,9 +208,6 @@ const Inicio = (props) => {
                             }
                         </Row>
                     </article>
-                    <article className='d-flex justify-content-center'>
-                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleTecnologia}>Ver mas</Link>
-                    </article>
                 </article>
                 <article>
                     <p className='fw-bold mt-2 py-3 text-center'>PUBLICIDAD</p>
@@ -243,9 +222,6 @@ const Inicio = (props) => {
                                     <ItemNoticias key={noticias.id} noticias={noticias} consultarAPI={props.consultarApi}></ItemNoticias>)
                             }
                         </Row>
-                    </article>
-                    <article className='d-flex justify-content-center'>
-                        <Link to="/categoria" className="btn btn-primary fs-4" onClick={handleFotografia}>Ver mas</Link>
                     </article>
                 </article>
             </Container>

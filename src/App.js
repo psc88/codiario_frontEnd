@@ -1,7 +1,8 @@
 import './App.css';
 import NavbarAdmin from './common/NavbarAdmin';
 import NavbarInicio from './common/NavbarInicio';
-import Inicio from './Pages/Inicio';
+import InicioUsuario from './Pages/InicioUsuario'
+import Inicio from './PaginaSinLogueo/Inicio';
 import AcercaNosotros from './Pages/AcercaNosotros';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -61,10 +62,12 @@ function App() {
   }
 
   return (
+    <>
     <Router>
       <NavbarInicio></NavbarInicio>
       <Routes>
         <Route exact path='/' element={<Inicio consultarAPI={consultarAPI} noticias={noticias} handleNoticiaFiltrada={handleNoticiaFiltrada}></Inicio>}></Route>
+        <Route exact path='/usuario' element={<InicioUsuario consultarAPI={consultarAPI} noticias={noticias} handleNoticiaFiltrada={handleNoticiaFiltrada}></InicioUsuario>}></Route>
         <Route exact path='/categoria' element={<Categoria tituloFiltrado={tituloFiltrado} noticiaFiltrada={noticiaFiltrada} ></Categoria>}></Route>
         <Route exact path='/nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route>
         <Route exact path='/contacto' element={<Contacto></Contacto>}></Route>
@@ -78,6 +81,8 @@ function App() {
       </Routes>
       <Footer></Footer>
     </Router>
+    </>
+    
   );
 }
 

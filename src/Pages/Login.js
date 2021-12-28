@@ -26,6 +26,7 @@ const Login = (props) => {
                console.log('usuario comun')
                console.log(props.usuarios[i].email)
                console.log(props.usuarios[i].contraseña)
+               navegar("/ ")
                break;
             }
          }
