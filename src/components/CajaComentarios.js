@@ -8,7 +8,7 @@ const CajaComentarios = (props) => {
     <Container className="my-5">
       <ListGroup>
         {
-          props.comentarios.map((comentario)=> <Comentario key={comentario.id} comentario={comentario} consultarAPI={props.consultarAPI}></Comentario>)
+          props.comentarios.map((comentario)=><Comentario key={comentario.id} comentario={comentario} consultarAPI={props.consultarAPI}></Comentario>)
         }
       </ListGroup>
     </Container>
