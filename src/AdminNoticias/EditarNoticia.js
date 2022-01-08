@@ -79,7 +79,7 @@ const EditarNoticia = (props) => {
       <hr />
       <Form className="my-5" onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
-          <Form.Label>Titulo*</Form.Label>
+          <Form.Label>Titulooo*</Form.Label>
           <Form.Control
             type="text"
             minLength={5}
