@@ -16,18 +16,21 @@ const EditarNoticia = (props) => {
 
   const URL = process.env.REACT_APP_API_URL +'/noticias/'+id;
 
-  useEffect(async () => {
-    try{
-    const respuesta = await fetch(URL);
-      if (respuesta.status === 200){
-        const dato = await respuesta.json();
-        setNoticia(dato);
-        setCategoria(dato.categoria);
+  useEffect(() => {
+    const consultarApiPrueba = async () => {
+      try{
+      const respuesta = await fetch(URL);
+        if (respuesta.status === 200){
+          const dato = await respuesta.json();
+          setNoticia(dato);
+          setCategoria(dato.categoria);
+        }
+      }catch(error){
+        console.log(error);
+        Swal.fire("Oops algo salio mal!", "icon: error", "danger");
       }
-    }catch(error){
-      console.log(error);
-      Swal.fire("Oops algo salio mal!", "icon: error", "danger");
     }
+    consultarApiPrueba();
   }, []);
 
   const handleSubmit = async (e) => {
