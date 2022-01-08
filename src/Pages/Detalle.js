@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Row, Col, Image } from 'react-bootstrap';
-import Comentador from '../Components/Comentador';
+// import Comentador from '../Components/Comentador';
 // import CajaComentarios from '../Components/CajaComentarios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -65,7 +65,7 @@ const Detalle = (props) => {
           </section>
         </Col>
         <Col sm={12}>
-          <Comentador consultarAPI={consultarAPI} />
+          {/* <Comentador consultarAPI={consultarAPI} /> */}
           {/* <CajaComentarios comentarios={comentarios} consultarAPI={consultarAPI}></CajaComentarios> */}
         </Col>
       </Row>
