@@ -66,6 +66,7 @@ function App() {
     <>
     <Router>
       <NavbarAdmin></NavbarAdmin>
+      <NavbarUsuario></NavbarUsuario>
       <Routes>
         <Route exact path='/' element={<Inicio consultarAPI={consultarAPI} noticias={noticias} handleNoticiaFiltrada={handleNoticiaFiltrada}></Inicio>}></Route>
         <Route exact path='/usuario' element={<InicioUsuario consultarAPI={consultarAPI} noticias={noticias} handleNoticiaFiltrada={handleNoticiaFiltrada}></InicioUsuario>}></Route>
