@@ -34,6 +34,7 @@ function App() {
   useEffect(() => {
     consultarAPI();
     consultarAPIUIsuarios();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   const consultarAPI = async () => {

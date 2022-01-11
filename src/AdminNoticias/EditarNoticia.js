@@ -31,7 +31,7 @@ const EditarNoticia = (props) => {
       }
     }
     consultarApiPrueba();
-  }, []);
+  }, [URL]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
