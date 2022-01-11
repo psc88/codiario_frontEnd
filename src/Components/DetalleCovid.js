@@ -4,7 +4,6 @@ import { Col, Row, Image } from 'react-bootstrap';
 import mapaArgentina from '../img/mapaArgentina.png'
 
 const DetalleCovid = () => {
-    const [carga, setCarga] = useState(true);
     const [covidConfirmados, setCovidConfirmados] = useState(0);
     const [covidActivos, setCovidActivos] = useState(0);
     const [covidMuertos, setCovidMuertos] = useState(0);
@@ -19,7 +18,6 @@ const DetalleCovid = () => {
     }, []);
 
     const consultaAPICovid = async () => {
-        setCarga(true);
         const respuesta = await fetch('https://api.covid19api.com/dayone/country/argentina');
         const dato = await respuesta.json();
         const covidActual = dato[dato.length-1];

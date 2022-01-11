@@ -1,4 +1,3 @@
-import { FormControl } from "react-bootstrap";
 import Swal from "sweetalert2";
 
 const validarCampoRequerido = (dato) => {
