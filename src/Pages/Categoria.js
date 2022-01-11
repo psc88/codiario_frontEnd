@@ -4,17 +4,16 @@ import ItemCategoria from "../PaginaUsuarios/ItemCategoria";
 
 const Categoria = (props) => {
 
-    const [noticiaFiltradaCategoria, setNoticiaFiltradaCategoria] = useState([]);
-    const [tituloFiltradoCategoria, setTituloFiltradoCategoria] = useState("");
+  const [noticiaFiltradaCategoria, setNoticiaFiltradaCategoria] = useState([]);
+  const [tituloFiltradoCategoria, setTituloFiltradoCategoria] = useState("");
 
-    useEffect(() => {
-      consultarAPI();
-      },[]);
-    
+  useEffect(() => {
     const consultarAPI = () => {
-            setNoticiaFiltradaCategoria(props.noticiaFiltrada);
-            setTituloFiltradoCategoria(props.tituloFiltrado);
-    };
+      setNoticiaFiltradaCategoria(props.noticiaFiltrada);
+      setTituloFiltradoCategoria(props.tituloFiltrado);
+    }
+    consultarAPI();
+  }, [props.noticiaFiltrada, props.tituloFiltrado]);
 
   return (
     <Container>
