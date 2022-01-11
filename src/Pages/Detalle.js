@@ -22,6 +22,8 @@ const Detalle = (props) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  console.log(comentarios)
+
   const creador = async () => {
     try {
       const respuestaN = await fetch(URLn);
