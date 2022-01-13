@@ -1,12 +1,13 @@
 import React from 'react';
-import { Container, ListGroup } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { Row, Col, Image } from 'react-bootstrap';
 // import Comentador from '../Components/Comentador';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Publicidad from '../Components/Publicidad';
 import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif';
-import Comentario from "../Components/Comentario";
+// import Comentario from "../Components/Comentario";
+import PruebaComentario from '../Components/PruebaComentario';
 
 const Detalle = (props) => {
   const { id } = useParams();
@@ -67,11 +68,12 @@ const Detalle = (props) => {
         </Col>
         <Col sm={12}>
           {/* <Comentador consultarAPI={consultarAPI} /> */}
-          <ListGroup>
+          {/* <ListGroup>
             {
-              comentarios.map((comentario) =><Comentario></Comentario>)
+              comentarios.map((comentario) =><Comentario key={comentario.id} comentario={comentario} consultarAPI={consultarAPI}></Comentario>)
             }
-          </ListGroup>
+          </ListGroup> */}
+          <PruebaComentario comentario={comentarios}></PruebaComentario>
         </Col>
       </Row>
     </Container>
