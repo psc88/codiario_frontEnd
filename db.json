@@ -131,7 +131,12 @@
     {
       "nombre": "pablo",
       "comentario": "esto es otro comentario",
-      "id": 3
+      "id": 1
+    },
+    {
+      "nombre": "Sebastian",
+      "comentario": "esto es un comentario",
+      "id": 2
     },
     {
       "nombre": "Sebastian",
