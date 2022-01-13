@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Row, Col, Image } from 'react-bootstrap';
-// import Comentador from '../Components/Comentador';
+import Comentador from '../Components/Comentador';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Publicidad from '../Components/Publicidad';
@@ -67,7 +67,7 @@ const Detalle = (props) => {
           </section>
         </Col>
         <Col sm={12}>
-          {/* <Comentador consultarAPI={consultarAPI} /> */}
+          <Comentador consultarAPI={consultarAPI} />
           {/* <ListGroup>
             {
               comentarios.map((comentario) =><Comentario key={comentario.id} comentario={comentario} consultarAPI={consultarAPI}></Comentario>)
