@@ -1,16 +1,17 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, ListGroup } from 'react-bootstrap';
 import { Row, Col, Image } from 'react-bootstrap';
 // import Comentador from '../Components/Comentador';
-import CajaComentarios from '../Components/CajaComentarios';
+// import CajaComentarios from '../Components/CajaComentarios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Publicidad from '../Components/Publicidad';
 import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif';
+import Comentario from "../Components/Comentario";
 
 const Detalle = (props) => {
   const { id } = useParams();
-  const [comentarios ,setComentarios] = useState([]);
+  const [comentarios, setComentarios] = useState([]);
   const [noticiaSeleccionada, setNoticiaSeleccionada] = useState([]);
   const URL = process.env.REACT_APP_API_URL + "/comentarios"
   const URLn = process.env.REACT_APP_API_URL + "/noticias/" + id
@@ -19,10 +20,8 @@ const Detalle = (props) => {
   useEffect(() => {
     consultarAPI()
     creador()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  console.log(comentarios)
 
   const creador = async () => {
     try {
@@ -64,12 +63,17 @@ const Detalle = (props) => {
           <section className='row mt-5'>
             <h6 className='text-center'>ESPACIO PUBLICITARIO</h6>
             <Publicidad></Publicidad>
-            <Image src={publicidadLolla}></Image>           
+            <Image src={publicidadLolla}></Image>
           </section>
         </Col>
         <Col sm={12}>
           {/* <Comentador consultarAPI={consultarAPI} /> */}
-          <CajaComentarios comentarios={comentarios} consultarAPI={consultarAPI}></CajaComentarios>
+          {/* <CajaComentarios comentarios={comentarios} consultarAPI={consultarAPI}></CajaComentarios> */}
+          <ListGroup>
+            {
+              comentarios.map((comentario) => <Comentario key={comentario.id} comentario={comentario} consultarAPI={consultarAPI}></Comentario>)
+            }
+          </ListGroup>
         </Col>
       </Row>
     </Container>
