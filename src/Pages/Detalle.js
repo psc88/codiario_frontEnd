@@ -69,7 +69,7 @@ const Detalle = (props) => {
           {/* <Comentador consultarAPI={consultarAPI} /> */}
           <ListGroup>
             {
-              comentarios.map((comentario) => <Comentario key={comentario.id} comentario={comentario} consultarAPI={consultarAPI}></Comentario>)
+              comentarios.map((comentario) =><Comentario></Comentario>)
             }
           </ListGroup>
         </Col>

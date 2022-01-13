@@ -37,20 +37,19 @@ const Comentario = (props) => {
     });
   };
   return (
-    <h1>Hola</h1>
-    // <ListGroup.Item className="d-flex justify-content-between">
-    //   <p>
-    //     {props.comentario.id}-
-    //     <span className="fw-bolder">{props.comentario.nombre}:</span>
-    //     <br />
-    //     {props.comentario.comentario}
-    //   </p>
-    //   <div>
-    //     <Button onClick={() => eliminarProducto()}>
-    //       x
-    //     </Button>
-    //   </div>
-    // </ListGroup.Item>
+    <ListGroup.Item className="d-flex justify-content-between">
+      <p>
+        {props.comentario.id}-
+        <span className="fw-bolder">{props.comentario.nombre}:</span>
+        <br />
+        {props.comentario.comentario}
+      </p>
+      <div>
+        <Button onClick={() => eliminarProducto()}>
+          x
+        </Button>
+      </div>
+    </ListGroup.Item>
   );
 };
 
