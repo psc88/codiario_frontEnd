@@ -1,22 +1,23 @@
 import React from 'react';
-import { Button } from "react-bootstrap";
+import { Button, ListGroup } from "react-bootstrap";
 
+ const eliminarProducto = () => {
+     console.log("desde elimnarProducto")
+ }
 
 const PruebaComentario = (props) => {
     return (
-        <div>
+        <ListGroup.Item className="d-flex justify-content-between">
             <p>
-                {props.comentario.id}-
-                <span className="fw-bolder">{props.comentario.nombre}:</span>
+                {props.itemComentario.id}-
+                <span className="fw-bolder">{props.itemComentario.nombre}:</span>
                 <br />
-                {props.comentario.comentario}
+                {props.itemComentario.comentario}
             </p>
             <div>
-                <Button>
-                    x
-                </Button>
+                <Button onClick={() => eliminarProducto()}>x</Button>
             </div>
-        </div>
+        </ListGroup.Item>
     );
 };
 
