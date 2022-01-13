@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import Publicidad from '../Components/Publicidad';
 import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif';
 // import Comentario from "../Components/Comentario";
-import PruebaComentario from '../Components/PruebaComentario';
+import UsuarioComentario from '../Components/UsuarioComentario';
 
 const Detalle = (props) => {
   const { id } = useParams();
@@ -75,7 +75,7 @@ const Detalle = (props) => {
           </ListGroup> */}
           <ListGroup>
             {
-              comentarios.map((itemComentario) => <PruebaComentario itemComentario={itemComentario}></PruebaComentario>)
+              comentarios.map((itemComentario) => <UsuarioComentario itemComentario={itemComentario}></UsuarioComentario>)
             }
           </ListGroup>
         </Col>

@@ -5,7 +5,7 @@ import { Button, ListGroup } from "react-bootstrap";
      console.log("desde elimnarProducto")
  }
 
-const PruebaComentario = (props) => {
+const UsuarioComentario = (props) => {
     return (
         <ListGroup.Item className="d-flex justify-content-between">
             <p>
@@ -21,4 +21,4 @@ const PruebaComentario = (props) => {
     );
 };
 
-export default PruebaComentario;
+export default UsuarioComentario;
