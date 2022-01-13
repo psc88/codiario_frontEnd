@@ -1,15 +1,44 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Container, Form, Button, Alert } from 'react-bootstrap';
+import Swal from "sweetalert2";
+import { validarComentario, validarNombre } from '../Helpers/helpers';
 
-const UsuarioComentador = () => {
+const UsuarioComentador = (props) => {
     const [nombreComentador, setNombreComentador] = useState("");
     const [comentario, setComentario] = useState("");
     const [error, setError] = useState(false);
+    const URL = process.env.REACT_APP_API_URL + '/comentarios';
 
-    const handleSubmit = () => {
-        console.log(nombreComentador);
-        console.log(comentario);
-        setError(false);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (validarNombre(nombreComentador) && validarComentario(comentario)) {
+            const nuevoComentario = {
+                nombreComentador,
+                comentario
+            };
+            setError(false);
+            try {
+                const parametro = {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", },
+                    body: JSON.stringify(nuevoComentario),
+                };
+                const respuesta = await fetch(URL, parametro);
+                if (respuesta.status === 201) {
+                    Swal.fire("Exito", "Comentario enviado correctamente!", "success");
+                    e.target.reset();
+                    setNombreComentador('');
+                    setComentario('');
+                    props.consultarApi();
+                } else {
+                    Swal.fire("NO Realizado", "El comentario no se pudo enviar", "error");
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        } else {
+            setError(true);
+        }
     }
 
     return (

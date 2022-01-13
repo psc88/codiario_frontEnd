@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import Publicidad from '../Components/Publicidad';
 import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif';
 import UsuarioComentario from '../Components/UsuarioComentario';
+import UsuarioComentador from '../Components/UsuarioComentador';
 
 const Detalle = () => {
   const { id } = useParams();
@@ -67,7 +68,7 @@ const Detalle = () => {
         </Col>
         <Col sm={12}>
           {/* <Comentador consultarApi={consultarAPI}></Comentador> */}
-          <UsuarioComentario></UsuarioComentario>
+          <UsuarioComentador consultarApi={consultarAPI}></UsuarioComentador>
           <ListGroup>
             {
               comentarios.map((itemComentario) => <UsuarioComentario key={itemComentario.id} itemComentario={itemComentario} consultarApi={consultarAPI}></UsuarioComentario>)
