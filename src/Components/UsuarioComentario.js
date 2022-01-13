@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button, ListGroup } from "react-bootstrap";
 
- const eliminarProducto = () => {
-     console.log("desde elimnarProducto")
- }
+
 
 const UsuarioComentario = (props) => {
+    const eliminarProducto = () => {
+        console.log("desde elimnarProducto")
+    }
+    
     return (
         <ListGroup.Item className="d-flex justify-content-between">
             <p>
