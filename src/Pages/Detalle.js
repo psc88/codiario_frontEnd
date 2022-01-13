@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, ListGroup } from 'react-bootstrap';
 import { Row, Col, Image } from 'react-bootstrap';
-// import Comentador from '../Components/Comentador';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Publicidad from '../Components/Publicidad';
@@ -67,7 +66,6 @@ const Detalle = () => {
           </section>
         </Col>
         <Col sm={12}>
-          {/* <Comentador consultarApi={consultarAPI}></Comentador> */}
           <UsuarioComentador consultarApi={consultarAPI}></UsuarioComentador>
           <ListGroup>
             {
