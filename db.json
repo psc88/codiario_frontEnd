@@ -129,19 +129,29 @@
   ],
   "comentarios": [
     {
-      "nombre": "pablo",
+      "nombreComentador": "pablo",
       "comentario": "esto es otro comentario",
       "id": 1
     },
     {
-      "nombre": "Sebastian",
+      "nombreComentador": "Sebastian",
       "comentario": "esto es un comentario",
       "id": 2
     },
     {
-      "nombre": "Sebastian",
+      "nombreComentador": "Sebastian",
       "comentario": "esto es un comentario",
       "id": 4
+    },
+    {
+      "nombreComentador": "Pedro",
+      "comentario": "esto es un comentario pro",
+      "id": 5
+    },
+    {
+      "nombreComentador": "Pablo castillo",
+      "comentario": "esto es el ultimo comentario",
+      "id": 6
     }
   ],
   "usuarios": [

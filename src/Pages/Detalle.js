@@ -1,15 +1,14 @@
 import React from 'react';
 import { Container, ListGroup } from 'react-bootstrap';
 import { Row, Col, Image } from 'react-bootstrap';
-// import Comentador from '../Components/Comentador';
+import Comentador from '../Components/Comentador';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Publicidad from '../Components/Publicidad';
 import publicidadLolla from '../img/Publicidad/publicidadLolla1.gif';
-// import Comentario from "../Components/Comentario";
 import UsuarioComentario from '../Components/UsuarioComentario';
 
-const Detalle = (props) => {
+const Detalle = () => {
   const { id } = useParams();
   const [comentarios, setComentarios] = useState([]);
   const [noticiaSeleccionada, setNoticiaSeleccionada] = useState([]);
@@ -67,12 +66,7 @@ const Detalle = (props) => {
           </section>
         </Col>
         <Col sm={12}>
-          {/* <Comentador consultarAPI={consultarAPI} /> */}
-          {/* <ListGroup>
-            {
-              comentarios.map((comentario) =><Comentario key={comentario.id} comentario={comentario} consultarAPI={consultarAPI}></Comentario>)
-            }
-          </ListGroup> */}
+          <Comentador consultarApi={consultarAPI}></Comentador>
           <ListGroup>
             {
               comentarios.map((itemComentario) => <UsuarioComentario key={itemComentario.id} itemComentario={itemComentario} consultarApi={consultarAPI}></UsuarioComentario>)

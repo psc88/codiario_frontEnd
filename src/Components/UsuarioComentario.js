@@ -2,8 +2,6 @@ import React from 'react';
 import { Button, ListGroup } from "react-bootstrap";
 import Swal from 'sweetalert2';
 
-
-
 const UsuarioComentario = (props) => {
     const eliminarComentario = () => {
         Swal.fire({
@@ -42,7 +40,7 @@ const UsuarioComentario = (props) => {
         <ListGroup.Item className="d-flex justify-content-between">
             <p>
                 {props.itemComentario.id}-
-                <span className="fw-bolder">{props.itemComentario.nombre}:</span>
+                <span className="fw-bolder">{props.itemComentario.nombreComentador}:</span>
                 <br />
                 {props.itemComentario.comentario}
             </p>

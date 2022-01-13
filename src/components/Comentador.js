@@ -1,34 +1,36 @@
 import React, { useState } from "react";
-import { Form, Button, Container, } from "react-bootstrap";
+import { Form, Button, Container, Alert} from "react-bootstrap";
 import { validarComentario, validarNombre } from "../Helpers/helpers";
 import Swal from "sweetalert2";
 
 const Comentador = (props) => {
   const [nombreComentador, setNombreComentador] = useState("");
   const [comentario, setComentario] = useState("");
+  const [error, setError] = useState(false);
   const URL = process.env.REACT_APP_API_URL + '/comentarios';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validarNombre(nombreComentador) && validarComentario(comentario)) {
       const nuevoComentario = {
-        nombre: nombreComentador,
-        comentario: comentario,
+        nombreComentador,
+        comentario,
       };
+      setError(false);
       try {
         const parametro = {
           method: "POST",
           headers: { "Content-Type": "application/json", },
           body: JSON.stringify(nuevoComentario),
         };
-
         const respuesta = await fetch(URL, parametro);
-
         if (respuesta.status === 201) {
           Swal.fire("Exito", "Comentario enviado correctamente!", "success");
-          e.target.reset()
-          props.consultarAPI()
-
+          e.target.reset();
+          setNombreComentador('');
+          setComentario('');
+          props.consultarApi();
+          
         } else {
           Swal.fire("NO Realizado", "El comentario no se pudo enviar", "error");
         }
@@ -36,6 +38,7 @@ const Comentador = (props) => {
         console.log(error)
       }
     } else {
+      setError(true);
     }
   };
 
@@ -71,6 +74,11 @@ const Comentador = (props) => {
             Guardar
           </Button>
         </div>
+        {error === true ? (
+        <Alert variant="danger" className="mb-5">
+          Debe completar todos los campos para cargar una noticia!
+        </Alert>
+      ) : null}
       </Form>
     </Container>
   );
