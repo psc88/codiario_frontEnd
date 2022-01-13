@@ -2,17 +2,10 @@
   "noticias": [
     {
       "titulo": "Alerta roja por una cepa nueva",
-      "descripcion": "Se ha detectado una nueva sepa de covid-19 proveniente de Sudafrica. Los científicos estimaron que la nueva variante Ómicron tiene alrededor de 50 mutaciones respecto a otras cepas del coronavirus. La mayoría están ubicadas en la proteína spike, que es la que usa el virus para adherirse a las células sanas y sobre la que actúan la mayoría de las vacunas.",
+      "descripcion": "Se ha detectado una nueva sepa de covid-19 proveniente de Sudafrica. ",
       "linkImagen": "https://image.shutterstock.com/image-photo/medicine-doctor-robotics-research-analysis-600w-1673968429.jpg",
       "categoria": "Salud",
       "id": 5
-    },
-    {
-      "titulo": "Otra muerte mas",
-      "descripcion": "La inseguridad se cobro otra victima",
-      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
-      "categoria": "Deporte",
-      "id": 6
     },
     {
       "titulo": "Buen dia",
@@ -125,6 +118,13 @@
       "linkImagen": "https://lh3.googleusercontent.com/fife/AAWUweW1y5qan2l6KxvrnaJc8wXK6nNP-i4JOBRySflS-0BxKgsWgB6LumORp0jOniPZp0bcfxNd8erShyuIXfOcZeZZZcdrh8QdTrDeTpe67o07uOVSR4HqZZS-e26HExpxRW10kJ1bXatUUvc6wdCIIiltuCq7ORzlRatJ5ix3IsIA9VYqTBUG5xfRDn271Har0QqtcPHtAe9ndLNAmO67xGZRYeC4gtgGGt3u1a33tQiIcP8mh1j6yp9PHr1euintglb3GIeEtaVB9Je3N90tBqlCMF5FkIeLB4aU8t7sbU4UwCPKs1fF8ouhueCtmMuERrmfQKPRPu1IonGM8nityeINa8J6Ow-a4pcCWjHSvzQulomFe_7IgNcEz8Z0nJ26-JfK3ybt5WoJ9IqmdNJRjukFqqitMK81AfFVAvrOepvCjnm1lK_FWGqbTRLEDF6jh1Cm_29oOzgVcB1PP5av27YOpHsSdUG0Yi-o37D0CtI4pXu7KB1oDngUI7Sq7WuCLSA4TE6h05FfiJMEcpmZMx3Vu2-1Zwhm31E6gDNqNcCHRjQddZgxlRT2FN2wiRpBK1j09py5NsEhDAJsej_0YfR3NvLA-5qKMpKu52uQFsI3WwSzBsh82pCxiuVAxj3OqMA_s0JdAarUlO-8kV35AlI1He1Z0gLNfpd_nk-PGuDZWeP3N9UOQ8S2h7SQBVEZRWwYsjvUrwu804h7QvysPaDlIizgCtOPmA=w1878-h938-ft",
       "categoria": "Tecnologia",
       "id": 24
+    },
+    {
+      "titulo": "Otra Prueba",
+      "descripcion": "Esto es una prueba para ver si agrega noticia",
+      "linkImagen": "https://image.shutterstock.com/z/stock-photo-one-hundred-dollars-dinero-money-dolars-cash-flow-1446368390.jpg",
+      "categoria": "Actualidad",
+      "id": 25
     }
   ],
   "comentarios": [
