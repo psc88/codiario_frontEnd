@@ -1,6 +1,6 @@
 
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { Form, Alert, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -14,10 +14,28 @@ const LoginRegistro = () => {
     const [email, setEmail] = useState("");
     const [contraseña, setContraseña] = useState("");
     const [error, setError] = useState(false);
+    const [usuariosConsultado, setUsuariosConsultado] = useState([]);
+    const [emailConsultado, setEmailConsultado] = useState('');
     const navegacion = useNavigate();
 
     const URL = process.env.REACT_APP_API_URL + '/usuarios';
 
+    useEffect(() => {
+        miVariable();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      },[]);
+
+    const miVariable = async () => {
+        try {
+          const respuesta = await fetch(URL);
+          const datos = await respuesta.json();
+          setUsuariosConsultado(datos);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (validarCampoRequerido(nombreYApellido) &&
@@ -34,7 +52,6 @@ const LoginRegistro = () => {
                 email,
                 contraseña
             }
-            console.log(nuevoUsuario)
             try {
                 const parametros = {
                     method: "POST",
@@ -50,7 +67,7 @@ const LoginRegistro = () => {
                         'El registro fue realizado correctamente',
                         'success'
                     )
-                    navegacion('/usuario');
+                    // navegacion('/usuario');
                 } else {
                     Swal.fire({
                         icon: 'error',
@@ -122,10 +139,10 @@ const LoginRegistro = () => {
                     <Button variant="warning" type="submit" className="w-100">Registrarse</Button>
                 </Form>
                 <div className="center col-5">
-                    {error === true ? 
-                    <Alert variant='danger' className='mb-5 text-center'>
-                        Verifique los campos
-                    </Alert> : null}
+                    {error === true ?
+                        <Alert variant='danger' className='mb-5 text-center'>
+                            Verifique los campos
+                        </Alert> : null}
                 </div>
             </div>
         </Container>

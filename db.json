@@ -178,6 +178,30 @@
       "ciudad": "salta",
       "email": "pepe@gmail.com",
       "contraseña": "12345678Pepe"
+    },
+    {
+      "nombreYApellido": "Pablo Castillo",
+      "edad": "45",
+      "ciudad": "Enrico",
+      "email": "juan@gmail.com",
+      "contraseña": "Juan123456",
+      "id": 4
+    },
+    {
+      "nombreYApellido": "Pablo Castillo",
+      "edad": "45",
+      "ciudad": "Enrico",
+      "email": "juan@gmail.com",
+      "contraseña": "Jauna123456",
+      "id": 5
+    },
+    {
+      "nombreYApellido": "Pablo Castillo",
+      "edad": "45",
+      "ciudad": "Enrico",
+      "email": "juan@gmail.com",
+      "contraseña": "Juan123456",
+      "id": 6
     }
   ]
 }
